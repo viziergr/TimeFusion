@@ -97,4 +97,16 @@ class Event {
     public function setCreatorId(int $creator_id) {
         $this->creator_id = $creator_id;
     }
+
+    public function setPrivate(bool $is_private) {
+        if($is_private){
+            $this->is_private = 1;
+        }else{
+            $this->is_private = 0;
+        };
+    }
+
+    public function isPrivate(): bool {
+        return $this->is_private;
+    }
 }

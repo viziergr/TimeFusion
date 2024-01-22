@@ -99,11 +99,12 @@ class Events {
         $event->setEnd(\DateTime::createFromFormat('Y-m-d H:i',$data['date'] . ' ' . $data['end'])->format('Y-m-d H:i:s'));
         $event->setDescription($data['description']);
         $event->setCreatorId($userId);
+        $event->setPrivate($data['private']);
         return $event;
     }
 
     public function create(Event $event) {
-        $sql = "INSERT INTO event (title, description, start_time, end_time, creator_id) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO event (title, description, start_time, end_time, creator_id, is_private) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $this->mysqli->prepare($sql);
     
         if (!$stmt) {
@@ -117,9 +118,10 @@ class Events {
         $startTime = $event->getStartTime()->format('Y-m-d H:i:s');
         $endTime = $event->getEndTime()->format('Y-m-d H:i:s');
         $creatorId = $event->getCreatorId();
+        $isPrivate = $event->isPrivate();
     
         // Bind parameters avec des variables
-        $stmt->bind_param("sssss", $title, $description, $startTime, $endTime, $creatorId);
+        $stmt->bind_param("sssssi", $title, $description, $startTime, $endTime, $creatorId, $isPrivate);
     
         // Exécuter la requête
         $result = $stmt->execute();
@@ -145,7 +147,8 @@ class Events {
             $event->getDescription(),
             $event->getStartTime()->format('Y-m-d H:i:s'),
             $event->getEndTime()->format('Y-m-d H:i:s'),
-            $event->getId()
+            $event->getId(),
+            $event->isPrivate()
         ]);
     }
 

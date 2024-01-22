@@ -268,7 +268,7 @@ class Requests
                     throw new \Exception("Erreur de préparation de la requête d'insertion : " . $this->mysqli->error);
                 }
     
-                $stmtInsert->bind_param("ii", $teamId, $userId);
+                $stmtInsert->bind_param("ii", $eventId, $userId);
     
                 if (!$stmtInsert->execute()) {
                     throw new \Exception("Erreur lors de l'exécution de la requête d'insertion : " . $stmtInsert->error);
