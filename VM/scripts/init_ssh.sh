@@ -14,7 +14,6 @@ if [ ! -f "$SSH_PRIVATE_KEY" ] || [ ! -f "$SSH_PUBLIC_KEY" ]; then
     chown vagrant "$SSH_PRIVATE_KEY"
     chmod 700 "$SSH_PRIVATE_KEY"
     cp "$SSH_PUBLIC_KEY" /vagrant
-    ssh -o StrictHostKeyChecking=no -l "vagrant" "192.168.56.82"
     echo "Clés SSH générées avec succès."
 else
     echo "Les clés SSH existent déjà. Aucune nouvelle clé n'a été générée."
