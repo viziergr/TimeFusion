@@ -14,7 +14,7 @@ $teams = new TimeFusion\Team\Teams($mysqli);
 $start = $week->getFirstDay();
 $end = $week->getLastDay();
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['users_id'])) {
-    $usersId = explode(',', $_POST['users_id']);
+    $usersId = $_POST['users_id'];
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['team_id'])) {
     $usersId = $teams->getMembersByTeamId($_POST['team_id']);
 } else {

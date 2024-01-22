@@ -303,7 +303,6 @@ public class SyncUtil {
           .getNature()
           .equals(EventNature.ADDED)
       ) {
-        System.out.println("added");
         localOfflineAddedIds.add(localOfflineIds.get(i));
       }
     }

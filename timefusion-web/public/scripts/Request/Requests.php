@@ -139,6 +139,8 @@ class Requests
         $userId = $request['user_id'];
         $type = $request['type'];
 
+        dd($requestId,$teamId,$userId,$type);
+
         // Mettre à jour le statut de la demande dans la base de données
         // Supposons que vous ayez une colonne 'status' dans votre table 'request'
         if($type == 'team')

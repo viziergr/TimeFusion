@@ -181,6 +181,7 @@ public class RemoteToLocalEventSync {
       databaseUtil
     );
     if (!localOnlineIdsNotInDB.isEmpty()) {
+      System.out.println(localOnlineIdsNotInDB.toString());
       for (Integer id : localOnlineIdsNotInDB) {
         EventsEntity.deleteEventEntity(id);
       }
