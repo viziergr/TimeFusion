@@ -123,43 +123,72 @@ class Requests
 
 
     public function refuserDemande($requestId) {
-        // Mettre à jour le statut de la demande dans la base de données
-        // Supposons que vous ayez une colonne 'status' dans votre table 'request'
-        $sql = "UPDATE requests SET status = 'refusee' WHERE id = ?";
-        $stmt = $this->mysqli->prepare($sql);
-        $stmt->bind_param("i", $requestId);
-        $stmt->execute();
-        $stmt->close();
-    }
+        try {
+            // Mettre à jour le statut de la demande dans la base de données
+            // Supposons que vous ayez une colonne 'status' dans votre table 'request'
+            $sql = "UPDATE requests SET status = 'refusee' WHERE id = ?";
+            $stmt = $this->mysqli->prepare($sql);
+    
+            if (!$stmt) {
+                throw new \Exception("Erreur de préparation de la requête : " . $this->mysqli->error);
+            }
+    
+            $stmt->bind_param("i", $requestId);
+            
+            if (!$stmt->execute()) {
+                throw new \Exception("Erreur lors de l'exécution de la requête : " . $stmt->error);
+            }
+    
+            $stmt->close();
+        } catch (\Exception $e) {
+            // Gérer l'erreur, par exemple, en journalisant, en affichant un message à l'utilisateur, etc.
+            echo "Erreur : " . $e->getMessage();
+        }
+    }    
 
     public function accepterDemande($requestId) {
-        // Récupérer les informations de la demande
-        $request = $this->getRequestById($requestId);
-        $teamId = $request['team_id'];
-        $userId = $request['user_id'];
-        $type = $request['type'];
-
-        dd($requestId,$teamId,$userId,$type);
-
-        // Mettre à jour le statut de la demande dans la base de données
-        // Supposons que vous ayez une colonne 'status' dans votre table 'request'
-        if($type == 'team')
-            $sql = "UPDATE requests SET status = 'acceptee' WHERE id = ? AND type = 'team'";
-        else
-            $sql = "UPDATE requests SET status = 'acceptee' WHERE id = ? AND type = 'event'";
-        $stmt = $this->mysqli->prepare($sql);
-        $stmt->bind_param("i", $requestId);
-        $stmt->execute();
-        $stmt->close();
-
-        // Ajouter le membre à l'équipe
-        if($type == 'team'){
-            $this->ajouterMembreEquipe($teamId, $userId);
+        try {
+            // Récupérer les informations de la demande
+            $request = $this->getRequestById($requestId);
+            if (!$request) {
+                throw new \Exception("La demande avec l'ID $requestId n'a pas été trouvée.");
+            }
+    
+            $teamId = $request['team_id'];
+            $userId = $request['user_id'];
+            $type = $request['type'];
+    
+            // Mettre à jour le statut de la demande dans la base de données
+            // Supposons que vous ayez une colonne 'status' dans votre table 'request'
+            if ($type == 'team') {
+                $sql = "UPDATE requests SET status = 'acceptee' WHERE id = ? AND type = 'team'";
+            } else {
+                $sql = "UPDATE requests SET status = 'acceptee' WHERE id = ? AND type = 'event'";
+            }
+    
+            $stmt = $this->mysqli->prepare($sql);
+            if (!$stmt) {
+                throw new \Exception("Erreur de préparation de la requête : " . $this->mysqli->error);
+            }
+    
+            $stmt->bind_param("i", $requestId);
+            if (!$stmt->execute()) {
+                throw new \Exception("Erreur lors de l'exécution de la requête : " . $stmt->error);
+            }
+    
+            $stmt->close();
+    
+            // Ajouter le membre à l'équipe
+            if ($type == 'team') {
+                $this->ajouterMembreEquipe($teamId, $userId);
+            } else {
+                $this->ajouterParticipantEvent($teamId, $userId);
+            }
+        } catch (\Exception $e) {
+            // Gérer l'erreur, par exemple, en journalisant, en affichant un message à l'utilisateur, etc.
+            echo "Erreur : " . $e->getMessage();
         }
-        else{
-            $this->ajouterParticipantEvent($teamId, $userId);
-        }
-    }
+    }    
 
     // Méthode pour ajouter un membre à l'équipe
     private function ajouterMembreEquipe($teamId, $userId) {
