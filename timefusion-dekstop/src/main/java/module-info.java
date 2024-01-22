@@ -10,6 +10,7 @@ module com.timefusion {
   requires transitive org.controlsfx.controls;
   requires transitive com.google.gson;
 
+  opens com.timefusion to javafx.fxml;
   opens com.timefusion.ui.calendar to javafx.fxml;
   opens com.timefusion.ui.calendar.rendering to javafx.fxml;
   opens com.timefusion.ui.calendar.controlers to javafx.fxml;
@@ -18,7 +19,7 @@ module com.timefusion {
   opens com.timefusion.util to java.sql;
   opens com.timefusion.localStorage.Entities to com.google.gson;
   opens com.timefusion.localStorage to com.google.gson;
-  opens demo to javafx.fxml;
+  opens com.launcher to javafx.fxml;
   opens com.timefusion.sync to javafx.fxml;
   opens com.timefusion.ui.login to javafx.fxml;
   opens com.timefusion.ui.login.controlers to javafx.fxml;
@@ -29,7 +30,7 @@ module com.timefusion {
   exports com.timefusion.model ;
   exports com.timefusion.service ;
   exports com.timefusion.util ;
-  exports demo ;
+  exports com.launcher ;
   exports com.timefusion.ui.calendar ;
   exports com.timefusion.ui.calendar.components ;
   exports com.timefusion.ui.calendar.controlers ;
@@ -37,6 +38,7 @@ module com.timefusion {
   exports com.timefusion.ui.calendar.util ;
   exports com.timefusion.ui.login ;
   exports com.timefusion.ui.login.controlers ;
+  exports com.timefusion ;
   exports com.timefusion.sync to javafx.graphics;
   exports com.timefusion.localStorage.Entities to com.google.gson;
 }

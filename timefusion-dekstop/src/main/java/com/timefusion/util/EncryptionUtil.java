@@ -18,7 +18,7 @@ public class EncryptionUtil {
    */
   public static String hashPassword(String password) {
     // Set the BCrypt workload factor
-    int workload = 10;
+    int workload = 12;
 
     // Return hashed password
     return BCrypt.hashpw(password, BCrypt.gensalt(workload));
@@ -32,6 +32,19 @@ public class EncryptionUtil {
    * @return true if the password matches the hashedPassword, false otherwise.
    */
   public static boolean verifyPassword(String password, String hashedPassword) {
-    return BCrypt.checkpw(password, hashedPassword);
+    return BCrypt.checkpw(password, migratePassword(hashedPassword));
+  }
+
+  private static String migratePassword(String hashedPasswordWithOldPrefix) {
+    if (hashedPasswordWithOldPrefix.startsWith("$2a$")) {
+      return hashedPasswordWithOldPrefix; // No need to migrate, already using $2a
+    }
+
+    String hashedPasswordWithNewPrefix = hashedPasswordWithOldPrefix.replaceFirst(
+      "\\$2y\\$",
+      "\\$2a\\$"
+    );
+
+    return hashedPasswordWithNewPrefix;
   }
 }

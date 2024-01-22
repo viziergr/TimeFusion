@@ -1,9 +1,9 @@
 package com.timefusion.ui.calendar;
 
+import com.timefusion.TimeFusionApp;
 import com.timefusion.localStorage.Entities.EventNature;
 import com.timefusion.localStorage.Entities.EventsEntity;
 import com.timefusion.sync.SyncUtil;
-import demo.Main;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.application.Platform;
@@ -127,7 +127,7 @@ public class DisplaySync {
         removeElementsNotNeededToBeDisplayed() ||
         removeAmbiguousAppointments()
       ) {
-        Main.getWeekView().update();
+        TimeFusionApp.getWeekView().update();
       }
     });
   }

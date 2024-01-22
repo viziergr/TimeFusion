@@ -24,10 +24,6 @@ public class DatabaseUtil implements AutoCloseable {
 
   private static final String DEFAULT_DATABASE_URL =
     "jdbc:mysql://192.168.56.81:3306/TimeFusion";
-  // private static final String DEFAULT_DATABASE_URL =
-  // "jdbc:mysql://localhost:3306/infra";
-  // private static final String DEFAULT_DATABASE_USER = "UserTest";
-  // private static final String DEFAULT_DATABASE_PASSWORD = "test";
   private static final String DEFAULT_DATABASE_USER = "root";
   private static final String DEFAULT_DATABASE_PASSWORD = "root";
 
