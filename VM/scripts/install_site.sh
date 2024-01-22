@@ -32,7 +32,7 @@ else
     cd "$repertoire" || exit
 
     echo "=> [1] - Git clone"
-    git clone "https://github.com/viziergr/TimeFusion.git"
+    git clone "https://www.github.com/viziergr/TimeFusion.git"
 
     cd TimeFusion || exit
 
