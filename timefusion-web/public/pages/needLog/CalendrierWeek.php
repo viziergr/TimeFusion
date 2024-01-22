@@ -82,7 +82,7 @@ include __DIR__ .'/../../includes/header.php';
                         $eventStart = new DateTime($event['start_time']);
                         $eventEnd = new DateTime($event['end_time']);
                         if ($eventStart->format('H:i:s') <= $hour->format('H:i:s') && $eventEnd->format('H:i:s') > $hour->format('H:i:s')) {
-                            $eventData .= "<div class='calendar__event'>". h($event['title']). "</div>";
+                            $eventData .= '<div class="calendar__event"><a href="edit.php?id=' . $event['id'] . '">' . h($event['title']) . '</a></div>';                          
                         }
                     }
                     ?>
