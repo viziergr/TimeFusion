@@ -209,7 +209,7 @@ class Requests
 
     // Méthode pour récupérer les informations d'une demande par son ID
     private function getRequestById($requestId) {
-        $sql = "SELECT team_id, user_id FROM requests WHERE id = ?";
+        $sql = "SELECT team_id, user_id, type FROM requests WHERE id = ?";
         $stmt = $this->mysqli->prepare($sql);
         $stmt->bind_param("i", $requestId);
         $stmt->execute();
