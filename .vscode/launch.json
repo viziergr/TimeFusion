@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SyncScheduler",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.timefusion.sync.SyncScheduler",
+            "projectName": "timefusion-dekstop"
+        },
+        {
+            "type": "java",
             "name": "MainApp",
             "request": "launch",
             "mainClass": "com.timefusion/com.timefusion.jfxcalendar.model.MainApp",

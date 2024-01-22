@@ -13,7 +13,7 @@ echo "=> [1] - Partie MySQL"
 
 mysql -e "CREATE USER 'root'@'%';"
 mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;"
-mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.56.1' WITH GRANT OPTION;"
+mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.56.1' IDENTIFIED BY 'root' WITH GRANT OPTION;"
 mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'pma'@'192.168.56.80' IDENTIFIED BY 'pmapass';"
 mysql -e "FLUSH PRIVILEGES;"
 
