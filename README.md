@@ -5,11 +5,6 @@ TimeFusion est un projet qui mêle les cursus Logiciel & Données et CSS de l'ES
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/viziergr/TimeFusion)
 
-## Table des Matières
-- [Installation](#installation)
-- [Utilisation](#utilisation)
-- [Remerciements](#licence)
-
 ## Installation
 1. Clonez le repository : `git clone https://github.com/viziergr/TimeFusion.git`
 2. Installer Vagrant
