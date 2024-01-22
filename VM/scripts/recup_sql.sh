@@ -13,20 +13,20 @@ echo "START - Deplacement des fichiers - "$IP
 cd /var/www/html/
 mkdir git
 cd git
-git clone https://github.com/viziergr/Projet-InfraLogiciel.git
-cd Projet-InfraLogiciel
+git clone https://github.com/viziergr/TimeFusion.git
+cd TimeFusion
 git checkout gregoire/testArchitecture
 git config pull.rebase false --global
 
 mkdir /var/www/html/siteweb/
 
-rm -r /var/www/html/git/Projet-InfraLogiciel/.vscode
-rm -r /var/www/html/git/Projet-InfraLogiciel/livrables
-rm -r /var/www/html/git/Projet-InfraLogiciel/timefusion-dekstop
-rm -r /var/www/html/git/Projet-InfraLogiciel/timefusion-web
-rm -r /var/www/html/git/Projet-InfraLogiciel/VM
-rm /var/www/html/git/Projet-InfraLogiciel/Configurations.txt
-rm /var/www/html/git/Projet-InfraLogiciel/ProjetInfraLog.drawio
-rm /var/www/html/git/Projet-InfraLogiciel/README.md
+rm -r /var/www/html/git/TimeFusion/.vscode
+rm -r /var/www/html/git/TimeFusion/livrables
+rm -r /var/www/html/git/TimeFusion/timefusion-dekstop
+rm -r /var/www/html/git/TimeFusion/timefusion-web
+rm -r /var/www/html/git/TimeFusion/VM
+rm /var/www/html/git/TimeFusion/Configurations.txt
+rm /var/www/html/git/TimeFusion/ProjetInfraLog.drawio
+rm /var/www/html/git/TimeFusion/README.md
 
 echo "END - Deplacement des fichiers"

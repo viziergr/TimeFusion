@@ -19,12 +19,12 @@ fichier_conf="/etc/apache2/sites-available/000-default.conf"
 chaine_a_rechercher="DocumentRoot /var/www/html"
 
 # Nouvelle chaîne de caractères
-nouvelle_chaine="DocumentRoot /var/www/html/Projet-InfraLogiciel/timefusion-web/public/"
+nouvelle_chaine="DocumentRoot /var/www/html/TimeFusion/timefusion-web/public/"
 
 # Vérifier si le répertoire existe
-if [ -d "$repertoire/Projet-InfraLogiciel" ]; then
+if [ -d "$repertoire/TimeFusion" ]; then
     echo "=> [1] - Le répertoire existe"
-    cd "$repertoire/Projet-InfraLogiciel" || exit
+    cd "$repertoire/TimeFusion" || exit
 
     echo "=> [2] - Git pull"
     git pull
@@ -34,20 +34,20 @@ else
     echo "=> [1] - Git clone"
     git clone "https://github.com/viziergr/TimeFusion.git"
 
-    cd Projet-InfraLogiciel || exit
+    cd TimeFusion || exit
 
     echo "=> [2] - Configuration du git pull"
     git config pull.rebase false --global
 
     echo "=> [3] - Suppression des fichiers inutiles"
     # Suppression de tous les autres fichiers inutiles
-    rm -r /var/www/html/Projet-InfraLogiciel/.vscode
-    rm -r /var/www/html/Projet-InfraLogiciel/livrables
-    rm -r /var/www/html/Projet-InfraLogiciel/timefusion-dekstop
-    rm -r /var/www/html/Projet-InfraLogiciel/VM
-    rm /var/www/html/Projet-InfraLogiciel/Configurations.txt
-    rm /var/www/html/Projet-InfraLogiciel/ProjetInfraLog.drawio
-    rm /var/www/html/Projet-InfraLogiciel/README.md
+    rm -r /var/www/html/TimeFusion/.vscode
+    rm -r /var/www/html/TimeFusion/livrables
+    rm -r /var/www/html/TimeFusion/timefusion-dekstop
+    rm -r /var/www/html/TimeFusion/VM
+    rm /var/www/html/TimeFusion/Configurations.txt
+    rm /var/www/html/TimeFusion/ProjetInfraLog.drawio
+    rm /var/www/html/TimeFusion/README.md
 fi
 
 echo "=> [4] - Modification de la configuration du site 000-default.conf"
@@ -62,7 +62,7 @@ else
 fi
 
 echo "=> [5] - Déplacement de /myadmin/"
-    sudo mv /var/www/html/myadmin /var/www/html/Projet-InfraLogiciel/timefusion-web/public/
+    sudo mv /var/www/html/myadmin /var/www/html/TimeFusion/timefusion-web/public/
 
 service apache2 reload
 echo "END - Deplacement des fichiers"
