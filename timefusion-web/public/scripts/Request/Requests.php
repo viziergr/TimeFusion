@@ -356,12 +356,15 @@ class Requests
         $stmt = $this->mysqli->prepare($sql);
 
         if (!$stmt) {
-            $error = error_get_last();
-            throw new \Exception("Erreur lors de la préparation de la requête d'insertion de demande d'invitation. Détails : " . print_r($sql));
+            throw new \Exception("Erreur lors de la préparation de la requête d'insertion de demande d'invitation. Détails : " . $this->mysqli->error);
         }
     
         $stmt->bind_param("ii", $guestId, $eventId);
-        $stmt->execute();
+
+        if (!$stmt->execute()) {
+            throw new \Exception("Erreur lors de l'exécution de la requête de vérification : " . $stmt->error);
+        }
+
         $stmt->close();
 
         // Valider la transaction
