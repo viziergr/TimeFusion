@@ -1,16 +1,16 @@
 <?php
 
-require __DIR__ .'\..\..\src\bootstrap.php';
-require __DIR__ .'\..\..\src\Calendar\Week.php'; // Utilisez la classe Week au lieu de la classe Month
-require __DIR__ .'\..\..\src\Calendar\Events.php'; 
-require __DIR__ .'\..\..\src\Team\Teams.php';   
+require __DIR__ .'/../../src/bootstrap.php';
+require __DIR__ .'/../../src/Calendar/Week.php'; // Utilisez la classe Week au lieu de la classe Month
+require __DIR__ .'/../../src/Calendar/Events.php'; 
+require __DIR__ .'/../../src/Team/Teams.php';   
 
 sess_exists();
 
 $mysqli = connectDB();
-$events = new TimeFusion\Calendar\Events($mysqli);
-$week = new TimeFusion\Calendar\Week($_GET['week'] ?? null, $_GET['year'] ?? null); // Utilisez la classe Week
-$teams = new TimeFusion\Team\Teams($mysqli);
+$events = new TimeFusion/Calendar/Events($mysqli);
+$week = new TimeFusion/Calendar/Week($_GET['week'] ?? null, $_GET['year'] ?? null); // Utilisez la classe Week
+$teams = new TimeFusion/Team/Teams($mysqli);
 $start = $week->getFirstDay();
 $end = $week->getLastDay();
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['users_id'])) {
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['users_id'])) {
     $usersId = [$_SESSION['compte']];
 }
 $events = $events->getEventsBetweenByDay($start, $end, $usersId);
-require __DIR__ .'\..\..\views\header.php';
+require __DIR__ .'/../../views/header.php';
 ?>
 
 <div class="calendar">
@@ -82,7 +82,7 @@ require __DIR__ .'\..\..\views\header.php';
                         $eventStart = new DateTime($event['start_time']);
                         $eventEnd = new DateTime($event['end_time']);
                         if ($eventStart->format('H:i:s') <= $hour->format('H:i:s') && $eventEnd->format('H:i:s') > $hour->format('H:i:s')) {
-                            $eventData .= '<div class="calendar__event">' . (new \DateTime($event['start_time']))->format('H:i') . ' - ' . (new \DateTime($event['end_time']))->format('H:i') . ' : <a href="edit.php?id=' . $event['id'] . '">' . h($event['title']) . '</a></div>';
+                            $eventData .= '<div class="calendar__event">' . (new /DateTime($event['start_time']))->format('H:i') . ' - ' . (new /DateTime($event['end_time']))->format('H:i') . ' : <a href="edit.php?id=' . $event['id'] . '">' . h($event['title']) . '</a></div>';
                         }
                     }
                     ?>
@@ -103,5 +103,5 @@ require __DIR__ .'\..\..\views\header.php';
 </div>
 
 <?php 
-require __DIR__ .'\..\..\views\footer.php';
+require __DIR__ .'/../../views/footer.php';
 ?>
