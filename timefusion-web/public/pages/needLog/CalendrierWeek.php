@@ -82,7 +82,7 @@ require __DIR__ .'/../../views/header.php';
                         $eventStart = new DateTime($event['start_time']);
                         $eventEnd = new DateTime($event['end_time']);
                         if ($eventStart->format('H:i:s') <= $hour->format('H:i:s') && $eventEnd->format('H:i:s') > $hour->format('H:i:s')) {
-                            $eventData .= '<div class="calendar__event">' . (new /DateTime($event['start_time']))->format('H:i') . ' - ' . (new /DateTime($event['end_time']))->format('H:i') . ' : <a href="edit.php?id=' . $event['id'] . '">' . h($event['title']) . '</a></div>';
+                            $eventData .= '<div class="calendar__event">' . (new \DateTime($event['start_time']))->format('H:i') . ' - ' . (new /DateTime($event['end_time']))->format('H:i') . ' : <a href="edit.php?id=' . $event['id'] . '">' . h($event['title']) . '</a></div>';
                         }
                     }
                     ?>
