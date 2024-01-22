@@ -1,9 +1,9 @@
 <?php
 
-require __DIR__ .'/../../src/bootstrap.php';
-require __DIR__ .'/../../src/Calendar/Week.php'; // Utilisez la classe Week au lieu de la classe Month
-require __DIR__ .'/../../src/Calendar/Events.php'; 
-require __DIR__ .'/../../src/Team/Teams.php';   
+include __DIR__ .'/../../scripts/bootstrap.php';
+include __DIR__ .'/../../scripts/Calendar/Week.php';
+include __DIR__ .'/../../scripts/Calendar/Events.php'; 
+include __DIR__ .'/../../scripts/Team/Teams.php';   
 
 sess_exists();
 
