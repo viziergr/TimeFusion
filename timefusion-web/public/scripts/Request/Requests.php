@@ -226,6 +226,8 @@ class Requests
                 }
     
                 $stmtInsert->close();
+            }else{
+                throw new \Exception("L'utilisateur est déjà dans l'équipe.");
             }
         } catch (\Exception $e) {
             // Gérer l'erreur, par exemple, en journalisant, en affichant un message à l'utilisateur, etc.
