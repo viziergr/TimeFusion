@@ -14,17 +14,19 @@ public class DisplaySync {
   public static List<Integer> getNoneDisplayedEventsId() {
     List<Integer> allEventsId = SyncUtil.getLocalEventsIds();
     ObservableList<Calendar> calendar = CalendarView.getCalendars();
-    List<Appointment> displayedEvents = calendar.get(0).getAppointments();
-    List<Integer> displayedEventsId = new ArrayList<>();
-    if (displayedEvents.size() > 0) {
-      for (Appointment event : displayedEvents) {
-        int eventId = event.getEventEntity().getId();
-        displayedEventsId.add(eventId);
+    if (calendar.size() > 0) {
+      List<Appointment> displayedEvents = calendar.get(0).getAppointments();
+      List<Integer> displayedEventsId = new ArrayList<>();
+      if (displayedEvents.size() > 0) {
+        for (Appointment event : displayedEvents) {
+          int eventId = event.getEventEntity().getId();
+          displayedEventsId.add(eventId);
+        }
       }
-    }
 
-    if (displayedEventsId.size() > 0) {
-      allEventsId.removeAll(displayedEventsId);
+      if (displayedEventsId.size() > 0) {
+        allEventsId.removeAll(displayedEventsId);
+      }
     }
     return allEventsId;
   }
@@ -103,17 +105,19 @@ public class DisplaySync {
     boolean needToUpdate = false;
     List<Integer> allEventsId = SyncUtil.getLocalEventsIds();
     ObservableList<Calendar> calendar = CalendarView.getCalendars();
-    List<Appointment> displayedEvents = calendar.get(0).getAppointments();
-    List<Integer> eventsToNotDisplayIds = getEventsToNotDisplayIds();
-    if (displayedEvents.size() > 0) {
-      for (Appointment event : displayedEvents) {
-        int eventId = event.getEventEntity().getId();
-        if (
-          eventsToNotDisplayIds.contains(eventId) ||
-          !allEventsId.contains(eventId)
-        ) {
-          needToUpdate = true;
-          CalendarView.getCalendars().get(0).remove(event);
+    if (calendar.size() > 0) {
+      List<Appointment> displayedEvents = calendar.get(0).getAppointments();
+      List<Integer> eventsToNotDisplayIds = getEventsToNotDisplayIds();
+      if (displayedEvents.size() > 0) {
+        for (Appointment event : displayedEvents) {
+          int eventId = event.getEventEntity().getId();
+          if (
+            eventsToNotDisplayIds.contains(eventId) ||
+            !allEventsId.contains(eventId)
+          ) {
+            needToUpdate = true;
+            CalendarView.getCalendars().get(0).remove(event);
+          }
         }
       }
     }

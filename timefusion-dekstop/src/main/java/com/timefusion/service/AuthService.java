@@ -25,7 +25,6 @@ public class AuthService {
     throws AuthenticationException {
     try {
       User user = this.userDao.findByEmail(email);
-      System.out.println("User found: " + user);
 
       if (user != null) {
         if (EncryptionUtil.verifyPassword(password, user.getPassword())) {
