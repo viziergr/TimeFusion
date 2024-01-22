@@ -14,7 +14,7 @@ TimeFusion est un projet qui mêle les cursus Logiciel & Données et CSS de l'ES
 ## Utilisation
 1. Dans le dossier VM, lancer la commande `vagrant up` 
 2. Une fois les machines virtuelles opérationnelles, le site web est disponible à l'addresse 192.168.56.80
-3. Pour utiliser l'application Java, il faut lancer TimeFusionLauncher.java dans timefusion-dekstop/src/main/java/com/launcher
+3. Pour utiliser l'application Java, il faut lancer TimeFusionLauncher.java dans `timefusion-dekstop/src/main/java/com/launcher`
 
 ## Remerciements
 Nous tenons à remercier tous les contributeurs et les projets open source qui ont rendu cela possible.
