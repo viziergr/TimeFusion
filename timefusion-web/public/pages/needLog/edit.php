@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     if(empty($errors)) {
         $events->hydrate($event,$data,$_SESSION['compte']);
         $events->update($event);
-        header('Location: /PHP/public/Calendrier.php?success=2');
+        header('Location: /pages/needLog/Calendrier.php?success=2');
         exit();
     }
 }
