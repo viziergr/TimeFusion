@@ -160,11 +160,7 @@ class Requests
     
             // Mettre à jour le statut de la demande dans la base de données
             // Supposons que vous ayez une colonne 'status' dans votre table 'request'
-            if ($type == 'team') {
-                $sql = "UPDATE requests SET status = 'acceptee' WHERE id = ? AND type = 'team'";
-            } else {
-                $sql = "UPDATE requests SET status = 'acceptee' WHERE id = ? AND type = 'event'";
-            }
+            $sql = "UPDATE requests SET status = 'acceptee' WHERE id = ? ";
     
             $stmt = $this->mysqli->prepare($sql);
             if (!$stmt) {
