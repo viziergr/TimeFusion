@@ -1,6 +1,5 @@
 package com.timefusion;
 
-import com.timefusion.localStorage.Entities.EventsEntity;
 import com.timefusion.localStorage.JsonUtils;
 import com.timefusion.ui.calendar.Calendar;
 import com.timefusion.ui.calendar.WeekView;

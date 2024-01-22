@@ -76,17 +76,7 @@
                         <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.timefusion.jfxcalendar.model.MainApp</mainClass>
-                            <arguments>
-                                <argument>--module-path</argument>
-                                <argument>${java.class.path}</argument>
-                                <argument>--add-modules</argument>
-                                <argument>javafx.graphics</argument>
-                                <argument>--add-opens</argument>
-                                <argument>javafx.graphics/com.sun.javafx.stage=ALL-UNNAMED</argument>
-                                <argument>--add-exports</argument>
-                                <argument>javafx.graphics/com.sun.javafx.stage=ALL-UNNAMED</argument>
-                            </arguments>
+                            <mainClass>com.TimeFusionLauncher</mainClass>
                         </configuration>
                     </execution>
                 </executions>
