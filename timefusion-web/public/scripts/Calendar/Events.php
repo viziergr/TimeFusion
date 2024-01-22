@@ -99,7 +99,7 @@ class Events {
         $event->setEnd(\DateTime::createFromFormat('Y-m-d H:i',$data['date'] . ' ' . $data['end'])->format('Y-m-d H:i:s'));
         $event->setDescription($data['description']);
         $event->setCreatorId($userId);
-        $event->setPrivate($data['private']);
+        $event->setPrivate($data['is_private']);
         return $event;
     }
 
