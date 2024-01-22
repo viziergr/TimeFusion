@@ -189,7 +189,7 @@ class Requests
     // Méthode pour ajouter un membre à l'équipe
     private function ajouterMembreEquipe($teamId, $userId) {
         // Ajouter le membre à l'équipe sans effectuer de vérifications
-        $sqlInsert = "INSERT INTO team_membership (team_id, user_id) VALUES (?, ?)";
+        $sqlInsert = "INSERT INTO team_membership (team_id, user_id, role) VALUES (?, ?, 'Member')";
         $stmtInsert = $this->mysqli->prepare($sqlInsert);
         $stmtInsert->bind_param("ii", $teamId, $userId);
         $stmtInsert->execute();
