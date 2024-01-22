@@ -188,49 +188,23 @@ class Requests
 
     // Méthode pour ajouter un membre à l'équipe
     private function ajouterMembreEquipe($teamId, $userId) {
-        // Vérifier si le membre n'est pas déjà dans l'équipe
-        $sql = "SELECT COUNT(*) FROM team_membership WHERE team_id = ? AND user_id = ?";
-        $stmt = $this->mysqli->prepare($sql);
-        $stmt->bind_param("ii", $teamId, $userId);
-        $stmt->execute();
-        $stmt->bind_result($count);
-        $stmt->fetch();
-        $stmt->close();
-
-        // Initialiser $count si aucune ligne n'est trouvée
-        $count = isset($count) ? $count : 0;
-
-        // Si le membre n'est pas déjà dans l'équipe, l'ajouter
-        if ($count == 0) {
-            $sql = "INSERT INTO team_membership (team_id, user_id) VALUES (?, ?)";
-            $stmt = $this->mysqli->prepare($sql);
-            $stmt->bind_param("ii", $teamId, $userId);
-            $stmt->execute();
-            $stmt->close();
-        }
+        // Ajouter le membre à l'équipe sans effectuer de vérifications
+        $sqlInsert = "INSERT INTO team_membership (team_id, user_id) VALUES (?, ?)";
+        $stmtInsert = $this->mysqli->prepare($sqlInsert);
+        $stmtInsert->bind_param("ii", $teamId, $userId);
+        $stmtInsert->execute();
+        $stmtInsert->close();
     }
+    
+    
 
     private function ajouterParticipantEvent($eventId, $userId) {
-        // Vérifier si le membre n'est pas déjà dans l'équipe
-        $sql = "SELECT COUNT(*) FROM event_participant WHERE event_id = ? AND participant_id = ?";
-        $stmt = $this->mysqli->prepare($sql);
-        $stmt->bind_param("ii", $eventId, $userId);
-        $stmt->execute();
-        $stmt->bind_result($count);
-        $stmt->fetch();
-        $stmt->close();
-
-        // Initialiser $count si aucune ligne n'est trouvée
-        $count = isset($count) ? $count : 0;
-
-        // Si le membre n'est pas déjà dans l'évènement, l'ajouter
-        if ($count == 0) {
-            $sql = "INSERT INTO event_participant (event_id, participant_id) VALUES (?, ?)";
-            $stmt = $this->mysqli->prepare($sql);
-            $stmt->bind_param("ii", $eventId, $userId);
-            $stmt->execute();
-            $stmt->close();
-        }
+        // Ajouter le membre à l'équipe sans effectuer de vérifications
+        $sqlInsert = "INSERT INTO event_participant (event_id, user_id) VALUES (?, ?)";
+        $stmtInsert = $this->mysqli->prepare($sqlInsert);
+        $stmtInsert->bind_param("ii", $teamId, $userId);
+        $stmtInsert->execute();
+        $stmtInsert->close();
     }
 
     // Méthode pour récupérer les informations d'une demande par son ID
