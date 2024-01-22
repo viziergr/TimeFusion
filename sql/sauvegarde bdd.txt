@@ -1,0 +1,49 @@
+-- Table pour les utilisateurs
+CREATE TABLE user (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL, -- Assurez-vous de stocker les mots de passe de manière sécurisée (par exemple, avec bcrypt)
+    year INT -- Ou le type de données approprié pour l'année
+    -- Ajoutez d'autres colonnes au besoin
+);
+
+-- Table pour les équipes
+CREATE TABLE teams (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    team_name VARCHAR(255) NOT NULL
+    -- Ajoutez d'autres colonnes au besoin
+);
+
+-- Table pour les membres d'équipe
+CREATE TABLE team_members (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    team_id INT,
+    user_id INT,
+    role VARCHAR(255) NOT NULL,
+    FOREIGN KEY (team_id) REFERENCES teams(id),
+    FOREIGN KEY (user_id) REFERENCES user(id) -- Assurez-vous d'avoir une table 'users' avec une colonne 'id'
+);
+
+CREATE TABLE event (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    start_time DATETIME NOT NULL,
+    end_time DATETIME NOT NULL,
+    description TEXT,
+    creator_id INT NOT NULL,
+    is_private BOOLEAN NOT NULL
+    -- Ajoutez d'autres colonnes au besoin
+);
+
+CREATE TABLE demandeAjout (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    team_id INT NOT NULL,
+    user_id INT NOT NULL,
+    status ENUM('en_attente', 'acceptee', 'refusee') NOT NULL DEFAULT 'en_attente',
+    -- Ajoutez d'autres colonnes au besoin
+    FOREIGN KEY (team_id) REFERENCES teams(id),
+    FOREIGN KEY (user_id) REFERENCES user(id)
+);
+

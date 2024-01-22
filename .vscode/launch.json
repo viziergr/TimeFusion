@@ -1,0 +1,105 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.timefusion.jfxcalendar.model.MainApp",
+            "projectName": "timefusion-dekstop"
+        },
+        {
+            "type": "java",
+            "name": "CalendarView",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.timefusion.ui.CalendarView",
+            "projectName": "timefusion-dekstop"
+        },
+        {
+            "type": "java",
+            "name": "AuthService",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.timefusion.service.AuthService",
+            "projectName": "timefusion-dekstop"
+        },
+        {
+            "type": "java",
+            "name": "ValidationUtil",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.timefusion.util.ValidationUtil",
+            "projectName": "timefusion-dekstop"
+        },
+        {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.timefusion.ui.MainApp",
+            "projectName": "timefusion-dekstop"
+        },
+        {
+            "type": "java",
+            "name": "Team",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.timefusion.model.Team",
+            "projectName": "timefusion-dekstop"
+        },
+        {
+            "type": "java",
+            "name": "User",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.timefusion.model.User",
+            "projectName": "timefusion-dekstop"
+        },
+        {
+            "type": "java",
+            "name": "UserDao",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.timefusion.dao.UserDao",
+            "projectName": "timefusion-dekstop"
+        },
+        {
+            "type": "java",
+            "name": "EncryptionUtil",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.timefusion.util.EncryptionUtil",
+            "projectName": "timefusion-dekstop"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.timefusion.Main",
+            "projectName": "timefusion-dekstop"
+        },
+        {
+            "type": "java",
+            "name": "ImpressiveJavaFXApp",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.timefusion.ui.ImpressiveJavaFXApp",
+            "projectName": "timefusion-dekstop"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "MainApplication",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.timefusion.ui.MainApplication",
+            "projectName": "timefusion-dekstop"
+        },
+        {
+            "type": "java",
+            "name": "DatabaseUtil",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.timefusion.util.DatabaseUtil",
+            "projectName": "timefusion-dekstop"
+        }
+    ]
+}

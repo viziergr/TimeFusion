@@ -1,0 +1,48 @@
+@startuml 
+
+entity "event" {
+    + id : int 
+    --
+    title : varchar(45)
+    start_time : datetime
+    end_time : datetime
+    location : varchar(45)
+    description : varchar(255)
+    is_private : tinyint
+    creator_id : int
+}
+
+entity "event_participant" {
+    + id : int
+    --
+    event_id : int
+    participant_id : int
+    participant_type : enum('team', 'user')
+}
+
+entity "team" {
+    + id : int
+    --
+    name : varchar(45)
+    description : longtext
+}
+
+entity "team_memberships" {
+    + id : int
+    --
+    team_id : int
+    user_id : int
+    role : enum('Chef','Chef_adjoint','Ainé','membre')
+}
+
+entity "user" {
+    + id : int
+    email : varchar(45)
+    password : varchar(80)
+    first_name : varchar(45)
+    last_name : varchar(45)
+}
+@enduml
+
+
+

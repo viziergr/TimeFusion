@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.timefusion.ui.login.controlers.LoginControler">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2b6376;">
+         <children>
+            <Label layoutX="55.0" layoutY="183.0" text="TimeFusion">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="4.0" layoutY="221.0" text="timefusion@support.com">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../png/Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="413.0">
+         <children>
+            <ImageView fitHeight="79.0" fitWidth="85.0" layoutX="145.0" layoutY="47.0">
+               <image>
+                  <Image url="@../png/Cadenas.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="46.0" layoutY="166.0" text="Email">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <!-- Add the error label for email validation -->
+            <Label fx:id="lbl_emailError" layoutX="118.0" layoutY="190.0" text="" textFill="RED" visible="false">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="224.0" text="Password">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="button_login" layoutX="150.0" layoutY="277.0" mnemonicParsing="false" style="-fx-background-color: #2b6376; -fx-cursor: hand;" text="Login">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="pf_password" layoutX="118.0" layoutY="219.0" />
+            <TextField fx:id="tf_email" layoutX="118.0" layoutY="161.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

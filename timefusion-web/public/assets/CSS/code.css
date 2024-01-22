@@ -1,0 +1,924 @@
+/*page accueil*/
+
+.rectangle{
+   
+    width : 100%;
+    background-color: #00023C;
+
+}
+
+.rectangle img{
+    width : 8%;
+    padding-top: 2%;
+    padding-bottom: 0;
+    padding-left: 2%;    
+}
+
+.rectangle h1{
+    color : #fff;
+    padding-top : 17%;
+    padding-bottom : 0;
+    font-family: League Gothic;
+    font-weight: 400;
+    font-size: 6em;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align : center;
+    letter-spacing: -0.1em;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: normal;
+
+
+}
+
+.rectangle p{
+    color : #fff;
+    text-align : center;
+    padding-top : 0;
+    padding-bottom : 18%;
+    padding-left: 17%;
+    padding-right: 17%;
+    font-family: League Spartan;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 8.64px;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: normal;
+
+    
+}
+
+.rectangle2{
+    width : 100%;
+    background-color: #fff;
+}
+
+.rectangle2 #t{
+    color : #000;
+    padding-top : 10%;
+    padding-bottom : 0;
+    padding-left: 31%;
+    font-family: League Spartan;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: normal;
+    text-align: justify;
+}
+
+.rectangle2 #s{
+    color : #000;
+    padding-top : 1%;
+    padding-bottom : 10%;
+    padding-left: 31%;
+    padding-right: 31%;
+    font-family: Roboto;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: normal;
+    text-align: justify;
+}
+
+.bouton #connexion {
+    background-color: #000352;
+    position: absolute;
+    top: 0;
+
+    color: #fff;
+    border: 2px solid #FFF;
+    border-radius : 0.3em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.25em;
+    font-family: League Spartan;
+    font-weight: 400;
+    letter-spacing: 0.5em;
+    margin-bottom: 0;
+    margin-top: 4%;
+    line-height: normal;
+    padding: 0.5% 0.5%;
+    margin-left: 60%;
+    margin-right: 19%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.bouton #inscription{
+    background-color: #000352;
+    position: absolute;
+    top: 0;
+
+    color: #fff;
+    border: 2px solid #FFF;
+    border-radius : 0.3em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.25em;
+    font-family: League Spartan;
+    font-weight: 400;
+    letter-spacing: 0.5em;
+    margin-bottom: 0;
+    margin-top: 4%;
+    line-height: normal;
+    padding: 0.5% 0.5%;
+    margin-left: 80%;
+}
+
+
+/*page connexion*/
+
+.bande{
+    width:100%;
+    background-color:#00023C;
+}
+
+.bande img{
+    width:4%;
+    padding-top:0%;
+    padding-bottom:0;
+    padding-left:96%;
+}
+
+.cnx{
+    width: 100%;
+    background-color: #FFF;
+}
+
+.cnx img{
+   
+    width:10%;
+    margin: 0; /* Add this line to center the image horizontally */
+    padding-top:1%;
+    padding-bottom:0;
+    padding-left:45%
+
+}
+
+.cnx h1{
+    color : #000;
+    padding-top : 8%;
+    padding-bottom : 0;
+    font-family: League Spartan;
+    font-weight: 700;
+    font-size: 3em;
+    font-style: normal;
+    text-align : center;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: normal;
+}
+
+.cnx #email{
+    
+    color: #000;
+    font-family: League Spartan;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.02em;   
+    border-radius: 0.5em;
+    border: 1px solid #000;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    margin-bottom: 0;
+    margin-top: 2%;
+    width : 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: #FFF;
+    margin-left: 30%;
+    border: 1px solid #000;
+    background-color: #f8f3f3;
+}
+
+.cnx #password{
+    color: #000;
+    font-family: League Spartan;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.02em;   
+    border-radius: 0.5em;
+    border: 1px solid #000;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    margin-bottom: 0;
+    margin-top: 0.5%;
+    width : 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    background-color: #FFF;
+    margin-left: 30%;
+    border: 1px solid #000;
+    background-color: #f8f3f3;
+
+}
+
+.cnx #boutonConnexion{
+    color: #FFF;
+    background-color: #353BD1;
+    font-family: League Spartan;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.1em;   
+    border-radius: 0.5em;
+    border: 1px solid #000;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    margin-bottom: 0;
+    margin-top: 2%;
+    width : 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-left: 35%;
+    border: 1px solid #000;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.redirectionInscription{
+    width : 100%;
+    position: relative;
+}
+
+.redirectionInscription p{
+    color : #000;
+    padding-top : 0;
+    padding-bottom : 0;
+    font-family: League Spartan;
+    font-weight: 400;
+    font-size: 1.1875em;
+    font-style: normal;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: normal;
+    padding-top: 0.5%;
+    padding-left: 39%;
+    position: absolute;
+}
+
+.redirectionInscription button{
+    position: absolute;
+
+    color: #C00000;
+    font-family: League Spartan;
+    font-size: 1.1875em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #FFF;
+    border: none;
+    margin-left: 50%;
+    margin-top: 0.5%;
+
+}
+
+.oubliMDP{
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: 15%;
+}
+
+.oubliMDP #newMDP{
+    color: #000532;
+    font-family: League Spartan;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #FFF;
+    border: none;
+}
+
+.oubliMDP #newMDP:hover {
+    color: #452FFF;
+}
+
+/*page inscription*/
+
+.inscription{
+    width: 100%;
+    background-color: #FFF;
+}
+
+.inscription img{
+   
+    width:10%;
+    margin: 0; /* Add this line to center the image horizontally */
+    padding-top:1%;
+    padding-bottom:0;
+    padding-left:45%
+}
+
+.inscription h1{
+    color : #000;
+    padding-top : 0%;
+    padding-bottom : 0;
+    font-family: League Spartan;
+    font-weight: 700;
+    font-size: 3em;
+    font-style: normal;
+    text-align : center;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: normal;
+}
+
+.inscription #prenom{
+    color: #000;
+    font-family: League Spartan;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.02em;   
+    border-radius: 0.5em;
+    border: 1px solid #000;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    margin-bottom: 0;
+    margin-top: 1%;
+    width : 40%;
+    flex-direction: column;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    background-color: #FFF;
+    margin-left: 30%;
+    border: 1px solid #000;
+    background-color: #f8f3f3;
+}
+
+.inscription #nom{
+    color: #000;
+    font-family: League Spartan;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.02em;   
+    border-radius: 0.5em;
+    border: 1px solid #000;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    margin-bottom: 0;
+    margin-top: -0.75%;
+    width : 40%;
+    flex-direction: column;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    background-color: #FFF;
+    margin-left: 30%;
+    border: 1px solid #000;
+    background-color: #f8f3f3;
+}
+
+.inscription #email{
+    
+    color: #000;
+    font-family: League Spartan;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.02em;   
+    border-radius: 0.5em;
+    border: 1px solid #000;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    margin-bottom: 0;
+    margin-top:-0.75%;
+    width : 40%;
+    flex-direction: column;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    background-color: #FFF;
+    margin-left: 30%;
+    border: 1px solid #000;
+    background-color: #f8f3f3;
+}
+
+.inscription #date{
+    color: #000;
+    font-family: League Spartan;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.02em;   
+    border-radius: 0.5em;
+    border: 1px solid #000;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    margin-bottom: 0;
+    margin-top: -0.75%;
+    width : 40%;
+    height: 10%;
+    flex-direction: column;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    background-color: #FFF;
+    margin-left: 30%;
+    border: 1px solid #000;
+    background-color: #f8f3f3;
+}
+
+.inscription #username{
+    color: #000;
+    font-family: League Spartan;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.02em;   
+    border-radius: 0.5em;
+    border: 1px solid #000;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    margin-bottom: 0;
+    margin-top: -0.75%;
+    width : 40%;
+    flex-direction: column;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    background-color: #FFF;
+    margin-left: 30%;
+    border: 1px solid #000;
+    background-color: #f8f3f3;
+}
+.inscription #password{
+    color: #000;
+    font-family: League Spartan;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.02em;   
+    border-radius: 0.5em;
+    border: 1px solid #000;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    margin-bottom: 0;
+    margin-top: -0.75%;
+    width : 40%;
+    flex-direction: column;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    background-color: #FFF;
+    margin-left: 30%;
+    border: 1px solid #000;
+    background-color: #f8f3f3;
+
+}
+
+.inscription #boutonInscription{
+    color: #FFF;
+    background-color: #353BD1;
+    font-family: League Spartan;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.1em;   
+    border-radius: 0.5em;
+    border: 1px solid #000;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    margin-bottom: 0;
+    margin-top: 0.5%;
+    width : 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-left: 35%;
+    border: 1px solid #000;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.redirectionConnexion{
+    width : 100%;
+    position: relative;
+}
+
+.redirectionConnexion p{
+    color : #000;
+    padding-top : 0;
+    padding-bottom : 0;
+    font-family: League Spartan;
+    font-weight: 400;
+    font-size: 1.1875em;
+    font-style: normal;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: normal;
+    padding-top: 0.5%;
+    padding-left: 39%;
+    position: absolute;
+}
+
+.redirectionConnexion button{
+    position: absolute;
+
+    color: #C00000;
+    font-family: League Spartan;
+    font-size: 1.1875em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #FFF;
+    border: none;
+    margin-left: 50%;
+    margin-top: 0.5%;
+
+}
+
+/*page profil*/
+
+.bandeV {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #000352;
+}
+
+.bandeV #trbar{
+    width: 15%;
+    padding-top: 0%;
+    padding-bottom: 0;
+    padding-left: 0%;
+    margin: 1%;
+}
+
+.bandeV h1{
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
+    font-weight: 400;
+    left: 0;
+    width:100%;
+    text-align: center;
+    font-size: 1.75em;
+}
+
+.bandeV #logo{
+    width: 30%;
+    padding-top: 0%;
+    padding-bottom: 0;
+    padding-left: 0%;
+    margin: 1%;
+    margin-left: 35%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20%;
+}
+
+
+.dropdown {
+    top: 0;
+    margin: 1%;
+    position: relative; /* Ajoutez position relative */
+}
+
+.dropdown-content a{
+    display: none;
+    position: absolute;
+    background-color: #000352;
+    min-width: 300px; /* Ajustez la largeur selon vos besoins */
+    min-height: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 1%;
+    z-index: 1;
+    right: 0;
+    border: 2px solid #ffffff; /* Ajoutez cette ligne pour définir le contour en blanc */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.profil{
+    width: 30%;
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 20%;
+}
+.information{
+    width: 50%;
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.profil h1{
+    color : #000000;
+    padding-top : 30%;
+    padding-bottom : 0;
+    font-family: League Gothic;
+    font-weight: 400;
+    font-size: 4em;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: -0.1em;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: normal;
+}
+
+
+.information #fname, #lname, #email, #year{
+    background-color : #000352;
+    font-size: 1em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    padding: 1%;
+    font-weight: 700;
+    margin-left: 13%;
+    margin-right : 13%;
+    margin-top: 10%;
+    color : #FFF;
+    padding : 1%;
+    border-radius : 0%;
+    border : 1px #000352;            
+}
+
+.information #fname{
+    margin-top: 30%;
+}
+
+.modif a{
+    font-size: 1em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    padding: 1%;
+    font-weight: 700;
+    margin-left: 13%;
+    margin-right : 13%;
+    margin-top: 10%;
+    color : #000352;
+    padding : 1%;
+    border-radius : 10%;
+    border : 1px #000352;
+    text-align: center;}
+
+
+.traitV{
+    border-left: 1px solid black;
+    height: 80%;
+    position: absolute;
+    left: 0%;
+    margin-left: 0%;
+    margin-top: 10%;
+    top: 0;}
+
+/* page modification mdp */
+
+.modifPassword {
+    border : 2px solid #000;
+    border-radius: 0.5em;
+    margin-top: 15%;
+    margin-left: 25%;
+    margin-right: 25%;
+    
+}
+
+.modifPassword input[type="password"] {
+    background-color: transparent;
+    outline: none;
+    color: #000;
+    font-family: League Spartan;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.02em;   
+    border-radius: 0.5em;
+    border: 1px solid #000;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    margin-bottom: 0;
+    margin-top: -2%;
+    width : 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    background-color: #FFF;
+    margin-left: 3%;
+    border: 1px solid #000;
+    background-color: #f8f3f3;
+}
+
+.modifPassword #pwd{
+    margin-top: 3%;
+}
+
+.modifPassword button[type="submit"] {
+    padding: 1%;
+    background-color: #000352;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5em;
+    width: 30%;
+    margin-right: 35%;
+}
+
+button[type="submit"]:hover {
+    background-color: #452FFF;
+}
+
+.modifPassword h1{
+    color : #000;
+    padding-top : 3%;
+    padding-bottom :3%;
+    font-family: Roboto;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 3%;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* page oubli mdp */
+
+.envoiMail{
+    width: 40%;
+    background-color: #FFF;
+    border: 2px solid #000;
+    margin-top: 13%;
+    margin-bottom: 3%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.envoiMail #email{
+    border: 1px solid #000;
+    color:#000;
+    font-family: League Spartan;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.02em;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    margin-bottom: 0;
+    margin-top: -4%;
+    width : 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-left: 4%;
+    border: 1px solid #000;
+    background-color: #f8f3f3;
+    border-radius: 0.75em;
+    text-transform: none;
+}
+
+.envoiMail #boutonEnvoi{
+    color: #FFF;
+    background-color: #353BD1;
+    font-family: League Spartan;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.1em;   
+    border-radius: 0.5em;
+    border: 1px solid #000;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    margin-bottom: 0;
+    margin-top: -3%;
+    width : 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-left: 35%;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 3%;
+
+}
+
+.envoiMail h1{
+    color : #000;
+    padding-top : 3%;
+    padding-bottom : 0;
+    font-family: League Spartan;
+    font-weight: 700;
+    font-size: 1.5em;
+    font-style: normal;
+    text-align : center;
+    letter-spacing: 0.02em;
+    margin-bottom: 3%;
+    margin-top: 0;
+    line-height: normal;
+}
+
+.envoiMail p{
+    color : #000;
+    padding-top : 1%;
+    padding-bottom : 10%;
+    padding-left: 31%;
+    padding-right: 31%;
+    font-family: Roboto;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: normal;
+    text-align: justify;
+    text-align: center;
+}
+
+/* page reinit mdp */
+
+.modifPassword input[type='email']{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.modifPassword #email{
+    color:#000;
+    font-family: League Spartan;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 700;
+    margin-top : 3%;
+    line-height: normal;
+    letter-spacing: 0.02em;
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    margin-bottom: 0;
+    width : 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-left: 3%;
+    border: 1px solid #000;
+    background-color: #f8f3f3;
+    border-radius: 0.5em;  
+    text-transform: none;
+}
+
+.modifPassword p{
+    color : #000;
+    padding-top : 0%;
+    padding-bottom : 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: Roboto;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: normal;
+    text-align: center;
+}

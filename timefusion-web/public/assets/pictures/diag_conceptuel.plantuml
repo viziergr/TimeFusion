@@ -1,0 +1,63 @@
+@startuml name
+
+class Utilisateur {
+  +nom: String
+  +prenom: String
+  +adresseEmail: String
+  +motDePasse: String
+}
+
+class EquipeDeTravail {
+  +nomEquipe: String
+  +membres: List<Utilisateur>
+  +ajouterMembre(utilisateur: Utilisateur): void
+  +supprimerMembre(utilisateur: Utilisateur): void
+}
+
+class Agenda {
+  +evenements: List<Evenement>
+  +ajouterEvenement(evenement: Evenement): void
+  +supprimerEvenement(evenement: Evenement): void
+}
+
+class Evenement {
+  +titre: String
+  +dateHeure: DateTime
+  +nature: NatureEvenement
+}
+
+enum NatureEvenement {
+  Professionnel
+  Personnel
+}
+
+class ApplicationWeb {
+  +authentifierUtilisateur(adresseEmail: String, motDePasse: String): Utilisateur
+  +creerCompte(nom: String, prenom: String, adresseEmail: String, motDePasse: String): Utilisateur
+  +creerEquipe(nomEquipe: String): EquipeDeTravail
+  +visualiserEmploiDuTemps(utilisateur: Utilisateur): Agenda
+  +planifierEvenement(evenement: Evenement, equipe: EquipeDeTravail): void
+}
+
+class ApplicationBureau {
+  +ajouterEvenementHorsLigne(evenement: Evenement): void
+  +supprimerEvenementHorsLigne(evenement: Evenement): void
+  +synchroniserDonnees(): void
+}
+
+class UtilisateurWeb {
+  +consulterEmploiDuTemps(utilisateur: Utilisateur): Agenda
+  +planifierEvenementCommun(evenement: Evenement, participants: List<Utilisateur>): void
+}
+
+Utilisateur --* EquipeDeTravail
+Utilisateur --* Evenement
+Evenement *- NatureEvenement
+ApplicationWeb -- Utilisateur
+ApplicationWeb -- EquipeDeTravail
+ApplicationWeb -- Agenda
+ApplicationBureau -- Agenda
+UtilisateurWeb -- Agenda
+
+@enduml
+

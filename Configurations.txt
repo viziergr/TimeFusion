@@ -1,0 +1,55 @@
+JAVA JDK Link (1st one):
+https://adoptium.net/fr/temurin/releases/?os=windows&version=17
+
+Organisation packages:
+
+Pour un projet Java de cette ampleur, il est essentiel de structurer l'architecture en packages bien organisés, reflétant les différentes fonctionnalités et responsabilités du système. Voici une proposition d'organisation en packages avec les classes clés pour chaque package :
+
+### 1. **Package `ui`** (Interface Utilisateur)
+- **MainApplication.java** : Classe principale pour lancer l'application JavaFX.
+- **LoginController.java** : Contrôleur pour la vue de connexion.
+- **DashboardController.java** : Contrôleur pour le tableau de bord principal.
+- **EventController.java** : Contrôleur pour la gestion des événements.
+- **TeamController.java** : Contrôleur pour la gestion des équipes.
+- **ProfileController.java** : Contrôleur pour la gestion du profil utilisateur.
+
+### 2. **Package `model`** (Modèles de Données)
+- **User.java** : Classe représentant un utilisateur.
+- **Event.java** : Classe représentant un événement de l'agenda.
+- **Team.java** : Classe représentant une équipe de travail.
+- **Permission.java** : Classe représentant les permissions d'un utilisateur dans une équipe.
+
+### 3. **Package `dao`** (Data Access Object)
+- **UserDao.java** : Classe pour les opérations de base de données liées aux utilisateurs.
+- **EventDao.java** : Classe pour les opérations de base de données liées aux événements.
+- **TeamDao.java** : Classe pour les opérations de base de données liées aux équipes.
+
+### 4. **Package `service`** (Logique Métier)
+- **AuthService.java** : Service pour l'authentification et la gestion des sessions.
+- **EventService.java** : Service pour la gestion des événements.
+- **TeamService.java** : Service pour la gestion des équipes.
+- **UserService.java** : Service pour les opérations liées aux utilisateurs.
+
+### 5. **Package `util`** (Utilitaires)
+- **DatabaseUtil.java** : Outils pour la connexion et la gestion de la base de données.
+- **EncryptionUtil.java** : Outils pour le cryptage (par exemple, pour les mots de passe).
+- **ValidationUtil.java** : Outils pour la validation des données saisies par l'utilisateur.
+
+### 6. **Package `exception`** (Gestion des Exceptions)
+- **UserException.java** : Exceptions personnalisées liées aux utilisateurs.
+- **EventException.java** : Exceptions personnalisées liées aux événements.
+- **TeamException.java** : Exceptions personnalisées liées aux équipes.
+
+### 7. **Package `config`** (Configuration)
+- **ApplicationConfig.java** : Configuration générale de l'application (par exemple, paramètres de l'API, configurations de la base de données).
+
+### Résumé de l'Organisation
+- **UI** : Gère tout ce qui est lié à l'affichage et aux interactions utilisateur.
+- **Model** : Définit les entités de base manipulées par l'application.
+- **DAO** : S'occupe de la communication avec la base de données.
+- **Service** : Contient la logique métier et les règles de l'application.
+- **Util** : Fournit des fonctions utilitaires communes (comme le cryptage).
+- **Exception** : Gestion des exceptions personnalisées.
+- **Config** : Paramètres de configuration de l'application.
+
+Cette structure modulaire facilite la maintenance et l'évolution du code, permettant une séparation claire des préoccupations et une meilleure organisation du projet.

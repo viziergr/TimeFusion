@@ -1,0 +1,23 @@
+.appointment {
+    -fx-background-color: #ffab91;
+    -fx-background-radius: 3.0;
+    -fx-border-radius: 3.0;
+    -fx-padding: 0 2 2 1;
+    -fx-background-insets: 0 2 2 1;
+}
+
+.appointment .leftbar {
+    -fx-background-color: #ff7043;
+    -fx-background-radius: 3 0 0 3;
+}
+
+.appointment .lblStartTime {
+    -fx-font-size: 10;
+    -fx-text-fill: #bf360c;
+}
+
+.appointment-fullday {
+    -fx-background-color: mediumslateblue;
+    -fx-border-color: white;
+    -fx-border-width: 0 0 0 1;
+}

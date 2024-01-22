@@ -1,0 +1,25 @@
+/* AppointmentDetails.css */
+
+.root {
+    -fx-background-color: #f5f5f5; /* Set background color */
+}
+
+.label {
+    -fx-font-size: 14px; /* Set font size for labels */
+    -fx-font-weight: bold; /* Make labels bold */
+    -fx-text-fill: #333333; /* Set text color for labels */
+}
+
+.button {
+    -fx-font-size: 14px; /* Set font size for buttons */
+    -fx-background-color: white;
+    -fx-padding: 2 5 2 5;
+    -fx-background-insets: 2 1 0 0;
+    -fx-font-size: 20;
+    -fx-effect: dropshadow(three-pass-box, gray, 2, 0.0, 0, 0);
+}
+
+.button:hover {
+    -fx-effect: dropshadow(three-pass-box, gray, 5, 0.0, 0, 0);
+    -fx-cursor: hand;
+}

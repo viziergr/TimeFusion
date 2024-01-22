@@ -1,0 +1,47 @@
+.daychooser-day {
+    -fx-background-radius: 12;
+    -fx-alignment: center;
+    -fx-min-height: 24;
+    -fx-min-width: 24;
+    -fx-text-fill: black;
+}
+
+.daychooser-day:hover {
+    -fx-background-color: lightgray;
+    -fx-text-fill: gray
+}
+
+.daychooser-weekend {
+    -fx-text-fill: dodgerblue;
+}
+
+.daychooser-weekday {
+
+}
+
+.daychooser-selected-day {
+    -fx-background-color: dodgerblue;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.daychooser-selected-day.daychooser-day:hover{
+    -fx-background-color: cornflowerblue;
+    -fx-text-fill: white;
+}
+
+.daychooser-monthgrid {
+
+}
+
+.daychooser-label-month {
+    -fx-text-fill: black;
+}
+
+.daychooser-current-day {
+    -fx-text-fill: orange;
+}
+
+.button {
+    -fx-background-color: white;
+}

@@ -1,0 +1,132 @@
+.weekview {
+
+}
+
+.weekview-header-container {
+    -fx-background-color: white;
+}
+
+.weekview-scrollpane {
+
+}
+
+.weekview-scrollpane-content {
+
+}
+
+.weekview-timeaxis-container {
+    -fx-background-color: white;
+}
+
+.weekview-day-header-container {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, #8F8F8FB0, 8, 0.0, -3, 8);
+}
+
+.weekview-daypane-container {
+
+}
+
+
+.day-background {
+    -fx-border-color: lightgray;
+    -fx-border-width: 0 0 0 0.5;
+    -fx-background-color: white;
+}
+.day-background-today {
+
+}
+.day-background-weekend {
+    -fx-background-color: #FFFFEF;
+}
+
+.time-axis-label {
+    -fx-font-size: 10;
+    -fx-text-fill: darkgray;
+    -fx-translate-y: -5;
+    -fx-padding: 0 15 0 4;
+}
+
+.timeindicator {
+    -fx-fill: dodgerblue;
+    -fx-stroke: dodgerblue;
+}
+
+
+
+
+/*
+    HEADER
+ */
+.label-weekday {
+    -fx-font-size: 22;
+    -fx-padding: 5 10 10 4;
+}
+
+.label-date {
+    -fx-padding: 5 0 11 0;
+}
+
+.day-chooser .context-menu {
+    -fx-background-color: white;
+}
+
+.day-chooser .context-menu:focused {
+    -fx-background-color: white;
+}
+
+.day-chooser .custom-menu-item {
+    -fx-background-color: white;
+    -fx-padding: 0;
+}
+
+.day-chooser .custom-menu-item:focused {
+    -fx-background-color: white;
+}
+
+.header-button {
+    -fx-background-color: white;
+    -fx-padding: 2 5 2 5;
+    -fx-background-insets: 2 1 0 0;
+    -fx-font-size: 20;
+    -fx-effect: dropshadow(three-pass-box, gray, 2, 0.0, 0, 0);
+}
+.header-button:hover {
+    -fx-effect: dropshadow(three-pass-box, gray, 5, 0.0, 0, 0);
+}
+
+/*
+    header for every single day
+ */
+.header-weekday {
+    -fx-text-fill: slategray;
+    -fx-font-size: 10;
+}
+
+.header-date {
+    -fx-font-size: 12;
+}
+
+.header-container {
+    -fx-border-width: 0 0 2.5 0;
+    -fx-border-color: transparent;
+    -fx-padding: 0 0 2 0;
+}
+
+.header-container-today {
+    -fx-border-color: indianred;
+}
+
+.allday-appointment-pane {
+    -fx-background-radius: 5 0 0 0;
+    -fx-background-color: mediumslateblue;
+    -fx-border-radius: 5 0 0 0;
+    -fx-border-color: white;
+    -fx-border-width: 1 0 0 1;
+    -fx-padding: 0 5 0 5;
+}
+
+.allday-appointment-title {
+    -fx-padding: 0 0 0 5;
+    -fx-font-size: 11;
+}

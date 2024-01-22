@@ -1,0 +1,1690 @@
+                                 .-..-.       
+   _____                         | || |       
+  /____/-.---_  .---.  .---.  .-.| || | .---. 
+  | |  _   _  |/  _  \/  _  \/  _  || |/  __ \
+  * | | | | | || |_| || |_| || |_| || || |___/
+    |_| |_| |_|\_____/\_____/\_____||_|\_____)
+
+Moodle 3.11.17+ (Build: 20231207) command line installation program
+-->System
+++ Success ++
+-->antivirus_clamav
+++ Success ++
+-->availability_completion
+++ Success ++
+-->availability_date
+++ Success ++
+-->availability_grade
+++ Success ++
+-->availability_group
+++ Success ++
+-->availability_grouping
+++ Success ++
+-->availability_profile
+++ Success ++
+-->qtype_calculated
+++ Success ++
+-->qtype_calculatedmulti
+++ Success ++
+-->qtype_calculatedsimple
+++ Success ++
+-->qtype_ddimageortext
+++ Success ++
+-->qtype_ddmarker
+++ Success ++
+-->qtype_ddwtos
+++ Success ++
+-->qtype_description
+++ Success ++
+-->qtype_essay
+++ Success ++
+-->qtype_gapselect
+++ Success ++
+-->qtype_match
+++ Success ++
+-->qtype_missingtype
+++ Success ++
+-->qtype_multianswer
+++ Success ++
+-->qtype_multichoice
+++ Success ++
+-->qtype_numerical
+++ Success ++
+-->qtype_random
+++ Success ++
+-->qtype_randomsamatch
+++ Success ++
+-->qtype_shortanswer
+++ Success ++
+-->qtype_truefalse
+++ Success ++
+-->mod_assign
+++ Success ++
+-->mod_assignment
+++ Success ++
+-->mod_book
+++ Success ++
+-->mod_chat
+++ Success ++
+-->mod_choice
+++ Success ++
+-->mod_data
+++ Success ++
+-->mod_feedback
+++ Success ++
+-->mod_folder
+++ Success ++
+-->mod_forum
+++ Success ++
+-->mod_glossary
+++ Success ++
+-->mod_h5pactivity
+++ Success ++
+-->mod_imscp
+++ Success ++
+-->mod_label
+++ Success ++
+-->mod_lesson
+++ Success ++
+-->mod_lti
+++ Success ++
+-->mod_page
+++ Success ++
+-->mod_quiz
+++ Success ++
+-->mod_resource
+++ Success ++
+-->mod_scorm
+++ Success ++
+-->mod_survey
+++ Success ++
+-->mod_url
+++ Success ++
+-->mod_wiki
+++ Success ++
+-->mod_workshop
+++ Success ++
+-->auth_cas
+++ Success ++
+-->auth_db
+++ Success ++
+-->auth_email
+++ Success ++
+-->auth_ldap
+++ Success ++
+-->auth_lti
+++ Success ++
+-->auth_manual
+++ Success ++
+-->auth_mnet
+++ Success ++
+-->auth_nologin
+++ Success ++
+-->auth_none
+++ Success ++
+-->auth_oauth2
+++ Success ++
+-->auth_shibboleth
+++ Success ++
+-->auth_webservice
+++ Success ++
+-->calendartype_gregorian
+++ Success ++
+-->customfield_checkbox
+++ Success ++
+-->customfield_date
+++ Success ++
+-->customfield_select
+++ Success ++
+-->customfield_text
+++ Success ++
+-->customfield_textarea
+++ Success ++
+-->enrol_category
+++ Success ++
+-->enrol_cohort
+++ Success ++
+-->enrol_database
+++ Success ++
+-->enrol_fee
+++ Success ++
+-->enrol_flatfile
+++ Success ++
+-->enrol_guest
+++ Success ++
+-->enrol_imsenterprise
+++ Success ++
+-->enrol_ldap
+++ Success ++
+-->enrol_lti
+++ Success ++
+-->enrol_manual
+++ Success ++
+-->enrol_meta
+++ Success ++
+-->enrol_mnet
+++ Success ++
+-->enrol_paypal
+++ Success ++
+-->enrol_self
+++ Success ++
+-->message_airnotifier
+++ Success ++
+-->message_email
+++ Success ++
+-->message_jabber
+++ Success ++
+-->message_popup
+++ Success ++
+-->block_accessreview
+++ Success ++
+-->block_activity_modules
+++ Success ++
+-->block_activity_results
+++ Success ++
+-->block_admin_bookmarks
+++ Success ++
+-->block_badges
+++ Success ++
+-->block_blog_menu
+++ Success ++
+-->block_blog_recent
+++ Success ++
+-->block_blog_tags
+++ Success ++
+-->block_calendar_month
+++ Success ++
+-->block_calendar_upcoming
+++ Success ++
+-->block_comments
+++ Success ++
+-->block_completionstatus
+++ Success ++
+-->block_course_list
+++ Success ++
+-->block_course_summary
+++ Success ++
+-->block_feedback
+++ Success ++
+-->block_globalsearch
+++ Success ++
+-->block_glossary_random
+++ Success ++
+-->block_html
+++ Success ++
+-->block_login
+++ Success ++
+-->block_lp
+++ Success ++
+-->block_mentees
+++ Success ++
+-->block_mnet_hosts
+++ Success ++
+-->block_myoverview
+++ Success ++
+-->block_myprofile
+++ Success ++
+-->block_navigation
+++ Success ++
+-->block_news_items
+++ Success ++
+-->block_online_users
+++ Success ++
+-->block_private_files
+++ Success ++
+-->block_quiz_results
+++ Success ++
+-->block_recent_activity
+++ Success ++
+-->block_recentlyaccessedcourses
+++ Success ++
+-->block_recentlyaccesseditems
+++ Success ++
+-->block_rss_client
+++ Success ++
+-->block_search_forums
+++ Success ++
+-->block_section_links
+++ Success ++
+-->block_selfcompletion
+++ Success ++
+-->block_settings
+++ Success ++
+-->block_site_main_menu
+++ Success ++
+-->block_social_activities
+++ Success ++
+-->block_starredcourses
+++ Success ++
+-->block_tag_flickr
+++ Success ++
+-->block_tag_youtube
+++ Success ++
+-->block_tags
+++ Success ++
+-->block_timeline
+++ Success ++
+-->media_html5audio
+++ Success ++
+-->media_html5video
+++ Success ++
+-->media_swf
+++ Success ++
+-->media_videojs
+++ Success ++
+-->media_vimeo
+++ Success ++
+-->media_youtube
+++ Success ++
+-->filter_activitynames
+++ Success ++
+-->filter_algebra
+++ Success ++
+-->filter_censor
+++ Success ++
+-->filter_data
+++ Success ++
+-->filter_displayh5p
+++ Success ++
+-->filter_emailprotect
+++ Success ++
+-->filter_emoticon
+++ Success ++
+-->filter_glossary
+++ Success ++
+-->filter_mathjaxloader
+++ Success ++
+-->filter_mediaplugin
+++ Success ++
+-->filter_multilang
+++ Success ++
+-->filter_tex
+++ Success ++
+-->filter_tidy
+++ Success ++
+-->filter_urltolink
+++ Success ++
+-->editor_atto
+++ Success ++
+-->editor_textarea
+++ Success ++
+-->editor_tinymce
+++ Success ++
+-->format_singleactivity
+++ Success ++
+-->format_social
+++ Success ++
+-->format_topics
+++ Success ++
+-->format_weeks
+++ Success ++
+-->dataformat_csv
+++ Success ++
+-->dataformat_excel
+++ Success ++
+-->dataformat_html
+++ Success ++
+-->dataformat_json
+++ Success ++
+-->dataformat_ods
+++ Success ++
+-->dataformat_pdf
+++ Success ++
+-->profilefield_checkbox
+++ Success ++
+-->profilefield_datetime
+++ Success ++
+-->profilefield_menu
+++ Success ++
+-->profilefield_social
+++ Success ++
+-->profilefield_text
+++ Success ++
+-->profilefield_textarea
+++ Success ++
+-->report_backups
+++ Success ++
+-->report_competency
+++ Success ++
+-->report_completion
+++ Success ++
+-->report_configlog
+++ Success ++
+-->report_courseoverview
+++ Success ++
+-->report_eventlist
+++ Success ++
+-->report_infectedfiles
+++ Success ++
+-->report_insights
+++ Success ++
+-->report_log
+++ Success ++
+-->report_loglive
+++ Success ++
+-->report_outline
+++ Success ++
+-->report_participation
+++ Success ++
+-->report_performance
+++ Success ++
+-->report_progress
+++ Success ++
+-->report_questioninstances
+++ Success ++
+-->report_security
+++ Success ++
+-->report_stats
+++ Success ++
+-->report_status
+++ Success ++
+-->report_usersessions
+++ Success ++
+-->gradeexport_ods
+++ Success ++
+-->gradeexport_txt
+++ Success ++
+-->gradeexport_xls
+++ Success ++
+-->gradeexport_xml
+++ Success ++
+-->gradeimport_csv
+++ Success ++
+-->gradeimport_direct
+++ Success ++
+-->gradeimport_xml
+++ Success ++
+-->gradereport_grader
+++ Success ++
+-->gradereport_history
+++ Success ++
+-->gradereport_outcomes
+++ Success ++
+-->gradereport_overview
+++ Success ++
+-->gradereport_singleview
+++ Success ++
+-->gradereport_user
+++ Success ++
+-->gradingform_guide
+++ Success ++
+-->gradingform_rubric
+++ Success ++
+-->mlbackend_php
+++ Success ++
+-->mlbackend_python
+++ Success ++
+-->mnetservice_enrol
+++ Success ++
+-->webservice_rest
+++ Success ++
+-->webservice_soap
+++ Success ++
+-->webservice_xmlrpc
+++ Success ++
+-->repository_areafiles
+++ Success ++
+-->repository_boxnet
+++ Success ++
+-->repository_contentbank
+++ Success ++
+-->repository_coursefiles
+++ Success ++
+-->repository_dropbox
+++ Success ++
+-->repository_equella
+++ Success ++
+-->repository_filesystem
+++ Success ++
+-->repository_flickr
+++ Success ++
+-->repository_flickr_public
+++ Success ++
+-->repository_googledocs
+++ Success ++
+-->repository_local
+++ Success ++
+-->repository_merlot
+++ Success ++
+-->repository_nextcloud
+++ Success ++
+-->repository_onedrive
+++ Success ++
+-->repository_picasa
+++ Success ++
+-->repository_recent
+++ Success ++
+-->repository_s3
+++ Success ++
+-->repository_skydrive
+++ Success ++
+-->repository_upload
+++ Success ++
+-->repository_url
+++ Success ++
+-->repository_user
+++ Success ++
+-->repository_webdav
+++ Success ++
+-->repository_wikimedia
+++ Success ++
+-->repository_youtube
+++ Success ++
+-->portfolio_boxnet
+++ Success ++
+-->portfolio_download
+++ Success ++
+-->portfolio_flickr
+++ Success ++
+-->portfolio_googledocs
+++ Success ++
+-->portfolio_mahara
+++ Success ++
+-->portfolio_picasa
+++ Success ++
+-->search_simpledb
+++ Success ++
+-->search_solr
+++ Success ++
+-->qbehaviour_adaptive
+++ Success ++
+-->qbehaviour_adaptivenopenalty
+++ Success ++
+-->qbehaviour_deferredcbm
+++ Success ++
+-->qbehaviour_deferredfeedback
+++ Success ++
+-->qbehaviour_immediatecbm
+++ Success ++
+-->qbehaviour_immediatefeedback
+++ Success ++
+-->qbehaviour_informationitem
+++ Success ++
+-->qbehaviour_interactive
+++ Success ++
+-->qbehaviour_interactivecountback
+++ Success ++
+-->qbehaviour_manualgraded
+++ Success ++
+-->qbehaviour_missing
+++ Success ++
+-->qformat_aiken
+++ Success ++
+-->qformat_blackboard_six
+++ Success ++
+-->qformat_examview
+++ Success ++
+-->qformat_gift
+++ Success ++
+-->qformat_missingword
+++ Success ++
+-->qformat_multianswer
+++ Success ++
+-->qformat_webct
+++ Success ++
+-->qformat_xhtml
+++ Success ++
+-->qformat_xml
+++ Success ++
+-->tool_analytics
+++ Success ++
+-->tool_availabilityconditions
+++ Success ++
+-->tool_behat
+++ Success ++
+-->tool_brickfield
+++ Success ++
+-->tool_capability
+++ Success ++
+-->tool_cohortroles
+++ Success ++
+-->tool_customlang
+++ Success ++
+-->tool_dataprivacy
+++ Success ++
+-->tool_dbtransfer
+++ Success ++
+-->tool_filetypes
+++ Success ++
+-->tool_generator
+++ Success ++
+-->tool_health
+++ Success ++
+-->tool_httpsreplace
+++ Success ++
+-->tool_innodb
+++ Success ++
+-->tool_installaddon
+++ Success ++
+-->tool_langimport
+++ Success ++
+-->tool_licensemanager
+++ Success ++
+-->tool_log
+++ Success ++
+-->tool_lp
+++ Success ++
+-->tool_lpimportcsv
+++ Success ++
+-->tool_lpmigrate
+++ Success ++
+-->tool_messageinbound
+++ Success ++
+-->tool_mobile
+++ Success ++
+-->tool_monitor
+++ Success ++
+-->tool_moodlenet
+++ Success ++
+-->tool_multilangupgrade
+++ Success ++
+-->tool_oauth2
+++ Success ++
+-->tool_phpunit
+++ Success ++
+-->tool_policy
+++ Success ++
+-->tool_profiling
+++ Success ++
+-->tool_recyclebin
+++ Success ++
+-->tool_replace
+++ Success ++
+-->tool_spamcleaner
+++ Success ++
+-->tool_task
+++ Success ++
+-->tool_templatelibrary
+++ Success ++
+-->tool_unsuproles
+++ Success ++
+-->tool_uploadcourse
+++ Success ++
+-->tool_uploaduser
+++ Success ++
+-->tool_usertours
+++ Success ++
+-->tool_xmldb
+++ Success ++
+-->cachestore_apcu
+++ Success ++
+-->cachestore_file
+++ Success ++
+-->cachestore_memcached
+++ Success ++
+-->cachestore_mongodb
+++ Success ++
+-->cachestore_redis
+++ Success ++
+-->cachestore_session
+++ Success ++
+-->cachestore_static
+++ Success ++
+-->cachelock_file
+++ Success ++
+-->fileconverter_googledrive
+++ Success ++
+-->fileconverter_unoconv
+++ Success ++
+-->contenttype_h5p
+++ Success ++
+-->theme_boost
+++ Success ++
+-->theme_classic
+++ Success ++
+-->h5plib_v124
+++ Success ++
+-->paygw_paypal
+++ Success ++
+-->assignsubmission_comments
+++ Success ++
+-->assignsubmission_file
+++ Success ++
+-->assignsubmission_onlinetext
+++ Success ++
+-->assignfeedback_comments
+++ Success ++
+-->assignfeedback_editpdf
+++ Success ++
+-->assignfeedback_file
+++ Success ++
+-->assignfeedback_offline
+++ Success ++
+-->assignment_offline
+++ Success ++
+-->assignment_online
+++ Success ++
+-->assignment_upload
+++ Success ++
+-->assignment_uploadsingle
+++ Success ++
+-->booktool_exportimscp
+++ Success ++
+-->booktool_importhtml
+++ Success ++
+-->booktool_print
+++ Success ++
+-->datafield_checkbox
+++ Success ++
+-->datafield_date
+++ Success ++
+-->datafield_file
+++ Success ++
+-->datafield_latlong
+++ Success ++
+-->datafield_menu
+++ Success ++
+-->datafield_multimenu
+++ Success ++
+-->datafield_number
+++ Success ++
+-->datafield_picture
+++ Success ++
+-->datafield_radiobutton
+++ Success ++
+-->datafield_text
+++ Success ++
+-->datafield_textarea
+++ Success ++
+-->datafield_url
+++ Success ++
+-->datapreset_imagegallery
+++ Success ++
+-->forumreport_summary
+++ Success ++
+-->ltiservice_basicoutcomes
+++ Success ++
+-->ltiservice_gradebookservices
+++ Success ++
+-->ltiservice_memberships
+++ Success ++
+-->ltiservice_profile
+++ Success ++
+-->ltiservice_toolproxy
+++ Success ++
+-->ltiservice_toolsettings
+++ Success ++
+-->quiz_grading
+++ Success ++
+-->quiz_overview
+++ Success ++
+-->quiz_responses
+++ Success ++
+-->quiz_statistics
+++ Success ++
+-->quizaccess_delaybetweenattempts
+++ Success ++
+-->quizaccess_ipaddress
+++ Success ++
+-->quizaccess_numattempts
+++ Success ++
+-->quizaccess_offlineattempts
+++ Success ++
+-->quizaccess_openclosedate
+++ Success ++
+-->quizaccess_password
+++ Success ++
+-->quizaccess_seb
+++ Success ++
+-->quizaccess_securewindow
+++ Success ++
+-->quizaccess_timelimit
+++ Success ++
+-->scormreport_basic
+++ Success ++
+-->scormreport_graphs
+++ Success ++
+-->scormreport_interactions
+++ Success ++
+-->scormreport_objectives
+++ Success ++
+-->workshopform_accumulative
+++ Success ++
+-->workshopform_comments
+++ Success ++
+-->workshopform_numerrors
+++ Success ++
+-->workshopform_rubric
+++ Success ++
+-->workshopallocation_manual
+++ Success ++
+-->workshopallocation_random
+++ Success ++
+-->workshopallocation_scheduled
+++ Success ++
+-->workshopeval_best
+++ Success ++
+-->atto_accessibilitychecker
+++ Success ++
+-->atto_accessibilityhelper
+++ Success ++
+-->atto_align
+++ Success ++
+-->atto_backcolor
+++ Success ++
+-->atto_bold
+++ Success ++
+-->atto_charmap
+++ Success ++
+-->atto_clear
+++ Success ++
+-->atto_collapse
+++ Success ++
+-->atto_emojipicker
+++ Success ++
+-->atto_emoticon
+++ Success ++
+-->atto_equation
+++ Success ++
+-->atto_fontcolor
+++ Success ++
+-->atto_h5p
+++ Success ++
+-->atto_html
+++ Success ++
+-->atto_image
+++ Success ++
+-->atto_indent
+++ Success ++
+-->atto_italic
+++ Success ++
+-->atto_link
+++ Success ++
+-->atto_managefiles
+++ Success ++
+-->atto_media
+++ Success ++
+-->atto_noautolink
+++ Success ++
+-->atto_orderedlist
+++ Success ++
+-->atto_recordrtc
+++ Success ++
+-->atto_rtl
+++ Success ++
+-->atto_strike
+++ Success ++
+-->atto_subscript
+++ Success ++
+-->atto_superscript
+++ Success ++
+-->atto_table
+++ Success ++
+-->atto_title
+++ Success ++
+-->atto_underline
+++ Success ++
+-->atto_undo
+++ Success ++
+-->atto_unorderedlist
+++ Success ++
+-->tinymce_ctrlhelp
+++ Success ++
+-->tinymce_managefiles
+++ Success ++
+-->tinymce_moodleemoticon
+++ Success ++
+-->tinymce_moodleimage
+++ Success ++
+-->tinymce_moodlemedia
+++ Success ++
+-->tinymce_moodlenolink
+++ Success ++
+-->tinymce_pdw
+++ Success ++
+-->tinymce_spellchecker
+++ Success ++
+-->tinymce_wrap
+++ Success ++
+-->logstore_database
+++ Success ++
+-->logstore_legacy
+++ Success ++
+-->logstore_standard
+++ Success ++
+Installation completed successfully.
+                                 .-..-.       
+   _____                         | || |       
+  /____/-.---_  .---.  .---.  .-.| || | .---. 
+  | |  _   _  |/  _  \/  _  \/  _  || |/  __ \
+  * | | | | | || |_| || |_| || |_| || || |___/
+    |_| |_| |_|\_____/\_____/\_____||_|\_____)
+
+Moodle 3.11.17+ (Build: 20231207) command line installation program
+-->System
+++ Success ++
+-->antivirus_clamav
+++ Success ++
+-->availability_completion
+++ Success ++
+-->availability_date
+++ Success ++
+-->availability_grade
+++ Success ++
+-->availability_group
+++ Success ++
+-->availability_grouping
+++ Success ++
+-->availability_profile
+++ Success ++
+-->qtype_calculated
+++ Success ++
+-->qtype_calculatedmulti
+++ Success ++
+-->qtype_calculatedsimple
+++ Success ++
+-->qtype_ddimageortext
+++ Success ++
+-->qtype_ddmarker
+++ Success ++
+-->qtype_ddwtos
+++ Success ++
+-->qtype_description
+++ Success ++
+-->qtype_essay
+++ Success ++
+-->qtype_gapselect
+++ Success ++
+-->qtype_match
+++ Success ++
+-->qtype_missingtype
+++ Success ++
+-->qtype_multianswer
+++ Success ++
+-->qtype_multichoice
+++ Success ++
+-->qtype_numerical
+++ Success ++
+-->qtype_random
+++ Success ++
+-->qtype_randomsamatch
+++ Success ++
+-->qtype_shortanswer
+++ Success ++
+-->qtype_truefalse
+++ Success ++
+-->mod_assign
+++ Success ++
+-->mod_assignment
+++ Success ++
+-->mod_book
+++ Success ++
+-->mod_chat
+++ Success ++
+-->mod_choice
+++ Success ++
+-->mod_data
+++ Success ++
+-->mod_feedback
+++ Success ++
+-->mod_folder
+++ Success ++
+-->mod_forum
+++ Success ++
+-->mod_glossary
+++ Success ++
+-->mod_h5pactivity
+++ Success ++
+-->mod_imscp
+++ Success ++
+-->mod_label
+++ Success ++
+-->mod_lesson
+++ Success ++
+-->mod_lti
+++ Success ++
+-->mod_page
+++ Success ++
+-->mod_quiz
+++ Success ++
+-->mod_resource
+++ Success ++
+-->mod_scorm
+++ Success ++
+-->mod_survey
+++ Success ++
+-->mod_url
+++ Success ++
+-->mod_wiki
+++ Success ++
+-->mod_workshop
+++ Success ++
+-->auth_cas
+++ Success ++
+-->auth_db
+++ Success ++
+-->auth_email
+++ Success ++
+-->auth_ldap
+++ Success ++
+-->auth_lti
+++ Success ++
+-->auth_manual
+++ Success ++
+-->auth_mnet
+++ Success ++
+-->auth_nologin
+++ Success ++
+-->auth_none
+++ Success ++
+-->auth_oauth2
+++ Success ++
+-->auth_shibboleth
+++ Success ++
+-->auth_webservice
+++ Success ++
+-->calendartype_gregorian
+++ Success ++
+-->customfield_checkbox
+++ Success ++
+-->customfield_date
+++ Success ++
+-->customfield_select
+++ Success ++
+-->customfield_text
+++ Success ++
+-->customfield_textarea
+++ Success ++
+-->enrol_category
+++ Success ++
+-->enrol_cohort
+++ Success ++
+-->enrol_database
+++ Success ++
+-->enrol_fee
+++ Success ++
+-->enrol_flatfile
+++ Success ++
+-->enrol_guest
+++ Success ++
+-->enrol_imsenterprise
+++ Success ++
+-->enrol_ldap
+++ Success ++
+-->enrol_lti
+++ Success ++
+-->enrol_manual
+++ Success ++
+-->enrol_meta
+++ Success ++
+-->enrol_mnet
+++ Success ++
+-->enrol_paypal
+++ Success ++
+-->enrol_self
+++ Success ++
+-->message_airnotifier
+++ Success ++
+-->message_email
+++ Success ++
+-->message_jabber
+++ Success ++
+-->message_popup
+++ Success ++
+-->block_accessreview
+++ Success ++
+-->block_activity_modules
+++ Success ++
+-->block_activity_results
+++ Success ++
+-->block_admin_bookmarks
+++ Success ++
+-->block_badges
+++ Success ++
+-->block_blog_menu
+++ Success ++
+-->block_blog_recent
+++ Success ++
+-->block_blog_tags
+++ Success ++
+-->block_calendar_month
+++ Success ++
+-->block_calendar_upcoming
+++ Success ++
+-->block_comments
+++ Success ++
+-->block_completionstatus
+++ Success ++
+-->block_course_list
+++ Success ++
+-->block_course_summary
+++ Success ++
+-->block_feedback
+++ Success ++
+-->block_globalsearch
+++ Success ++
+-->block_glossary_random
+++ Success ++
+-->block_html
+++ Success ++
+-->block_login
+++ Success ++
+-->block_lp
+++ Success ++
+-->block_mentees
+++ Success ++
+-->block_mnet_hosts
+++ Success ++
+-->block_myoverview
+++ Success ++
+-->block_myprofile
+++ Success ++
+-->block_navigation
+++ Success ++
+-->block_news_items
+++ Success ++
+-->block_online_users
+++ Success ++
+-->block_private_files
+++ Success ++
+-->block_quiz_results
+++ Success ++
+-->block_recent_activity
+++ Success ++
+-->block_recentlyaccessedcourses
+++ Success ++
+-->block_recentlyaccesseditems
+++ Success ++
+-->block_rss_client
+++ Success ++
+-->block_search_forums
+++ Success ++
+-->block_section_links
+++ Success ++
+-->block_selfcompletion
+++ Success ++
+-->block_settings
+++ Success ++
+-->block_site_main_menu
+++ Success ++
+-->block_social_activities
+++ Success ++
+-->block_starredcourses
+++ Success ++
+-->block_tag_flickr
+++ Success ++
+-->block_tag_youtube
+++ Success ++
+-->block_tags
+++ Success ++
+-->block_timeline
+++ Success ++
+-->media_html5audio
+++ Success ++
+-->media_html5video
+++ Success ++
+-->media_swf
+++ Success ++
+-->media_videojs
+++ Success ++
+-->media_vimeo
+++ Success ++
+-->media_youtube
+++ Success ++
+-->filter_activitynames
+++ Success ++
+-->filter_algebra
+++ Success ++
+-->filter_censor
+++ Success ++
+-->filter_data
+++ Success ++
+-->filter_displayh5p
+++ Success ++
+-->filter_emailprotect
+++ Success ++
+-->filter_emoticon
+++ Success ++
+-->filter_glossary
+++ Success ++
+-->filter_mathjaxloader
+++ Success ++
+-->filter_mediaplugin
+++ Success ++
+-->filter_multilang
+++ Success ++
+-->filter_tex
+++ Success ++
+-->filter_tidy
+++ Success ++
+-->filter_urltolink
+++ Success ++
+-->editor_atto
+++ Success ++
+-->editor_textarea
+++ Success ++
+-->editor_tinymce
+++ Success ++
+-->format_singleactivity
+++ Success ++
+-->format_social
+++ Success ++
+-->format_topics
+++ Success ++
+-->format_weeks
+++ Success ++
+-->dataformat_csv
+++ Success ++
+-->dataformat_excel
+++ Success ++
+-->dataformat_html
+++ Success ++
+-->dataformat_json
+++ Success ++
+-->dataformat_ods
+++ Success ++
+-->dataformat_pdf
+++ Success ++
+-->profilefield_checkbox
+++ Success ++
+-->profilefield_datetime
+++ Success ++
+-->profilefield_menu
+++ Success ++
+-->profilefield_social
+++ Success ++
+-->profilefield_text
+++ Success ++
+-->profilefield_textarea
+++ Success ++
+-->report_backups
+++ Success ++
+-->report_competency
+++ Success ++
+-->report_completion
+++ Success ++
+-->report_configlog
+++ Success ++
+-->report_courseoverview
+++ Success ++
+-->report_eventlist
+++ Success ++
+-->report_infectedfiles
+++ Success ++
+-->report_insights
+++ Success ++
+-->report_log
+++ Success ++
+-->report_loglive
+++ Success ++
+-->report_outline
+++ Success ++
+-->report_participation
+++ Success ++
+-->report_performance
+++ Success ++
+-->report_progress
+++ Success ++
+-->report_questioninstances
+++ Success ++
+-->report_security
+++ Success ++
+-->report_stats
+++ Success ++
+-->report_status
+++ Success ++
+-->report_usersessions
+++ Success ++
+-->gradeexport_ods
+++ Success ++
+-->gradeexport_txt
+++ Success ++
+-->gradeexport_xls
+++ Success ++
+-->gradeexport_xml
+++ Success ++
+-->gradeimport_csv
+++ Success ++
+-->gradeimport_direct
+++ Success ++
+-->gradeimport_xml
+++ Success ++
+-->gradereport_grader
+++ Success ++
+-->gradereport_history
+++ Success ++
+-->gradereport_outcomes
+++ Success ++
+-->gradereport_overview
+++ Success ++
+-->gradereport_singleview
+++ Success ++
+-->gradereport_user
+++ Success ++
+-->gradingform_guide
+++ Success ++
+-->gradingform_rubric
+++ Success ++
+-->mlbackend_php
+++ Success ++
+-->mlbackend_python
+++ Success ++
+-->mnetservice_enrol
+++ Success ++
+-->webservice_rest
+++ Success ++
+-->webservice_soap
+++ Success ++
+-->webservice_xmlrpc
+++ Success ++
+-->repository_areafiles
+++ Success ++
+-->repository_boxnet
+++ Success ++
+-->repository_contentbank
+++ Success ++
+-->repository_coursefiles
+++ Success ++
+-->repository_dropbox
+++ Success ++
+-->repository_equella
+++ Success ++
+-->repository_filesystem
+++ Success ++
+-->repository_flickr
+++ Success ++
+-->repository_flickr_public
+++ Success ++
+-->repository_googledocs
+++ Success ++
+-->repository_local
+++ Success ++
+-->repository_merlot
+++ Success ++
+-->repository_nextcloud
+++ Success ++
+-->repository_onedrive
+++ Success ++
+-->repository_picasa
+++ Success ++
+-->repository_recent
+++ Success ++
+-->repository_s3
+++ Success ++
+-->repository_skydrive
+++ Success ++
+-->repository_upload
+++ Success ++
+-->repository_url
+++ Success ++
+-->repository_user
+++ Success ++
+-->repository_webdav
+++ Success ++
+-->repository_wikimedia
+++ Success ++
+-->repository_youtube
+++ Success ++
+-->portfolio_boxnet
+++ Success ++
+-->portfolio_download
+++ Success ++
+-->portfolio_flickr
+++ Success ++
+-->portfolio_googledocs
+++ Success ++
+-->portfolio_mahara
+++ Success ++
+-->portfolio_picasa
+++ Success ++
+-->search_simpledb
+++ Success ++
+-->search_solr
+++ Success ++
+-->qbehaviour_adaptive
+++ Success ++
+-->qbehaviour_adaptivenopenalty
+++ Success ++
+-->qbehaviour_deferredcbm
+++ Success ++
+-->qbehaviour_deferredfeedback
+++ Success ++
+-->qbehaviour_immediatecbm
+++ Success ++
+-->qbehaviour_immediatefeedback
+++ Success ++
+-->qbehaviour_informationitem
+++ Success ++
+-->qbehaviour_interactive
+++ Success ++
+-->qbehaviour_interactivecountback
+++ Success ++
+-->qbehaviour_manualgraded
+++ Success ++
+-->qbehaviour_missing
+++ Success ++
+-->qformat_aiken
+++ Success ++
+-->qformat_blackboard_six
+++ Success ++
+-->qformat_examview
+++ Success ++
+-->qformat_gift
+++ Success ++
+-->qformat_missingword
+++ Success ++
+-->qformat_multianswer
+++ Success ++
+-->qformat_webct
+++ Success ++
+-->qformat_xhtml
+++ Success ++
+-->qformat_xml
+++ Success ++
+-->tool_analytics
+++ Success ++
+-->tool_availabilityconditions
+++ Success ++
+-->tool_behat
+++ Success ++
+-->tool_brickfield
+++ Success ++
+-->tool_capability
+++ Success ++
+-->tool_cohortroles
+++ Success ++
+-->tool_customlang
+++ Success ++
+-->tool_dataprivacy
+++ Success ++
+-->tool_dbtransfer
+++ Success ++
+-->tool_filetypes
+++ Success ++
+-->tool_generator
+++ Success ++
+-->tool_health
+++ Success ++
+-->tool_httpsreplace
+++ Success ++
+-->tool_innodb
+++ Success ++
+-->tool_installaddon
+++ Success ++
+-->tool_langimport
+++ Success ++
+-->tool_licensemanager
+++ Success ++
+-->tool_log
+++ Success ++
+-->tool_lp
+++ Success ++
+-->tool_lpimportcsv
+++ Success ++
+-->tool_lpmigrate
+++ Success ++
+-->tool_messageinbound
+++ Success ++
+-->tool_mobile
+++ Success ++
+-->tool_monitor
+++ Success ++
+-->tool_moodlenet
+++ Success ++
+-->tool_multilangupgrade
+++ Success ++
+-->tool_oauth2
+++ Success ++
+-->tool_phpunit
+++ Success ++
+-->tool_policy
+++ Success ++
+-->tool_profiling
+++ Success ++
+-->tool_recyclebin
+++ Success ++
+-->tool_replace
+++ Success ++
+-->tool_spamcleaner
+++ Success ++
+-->tool_task
+++ Success ++
+-->tool_templatelibrary
+++ Success ++
+-->tool_unsuproles
+++ Success ++
+-->tool_uploadcourse
+++ Success ++
+-->tool_uploaduser
+++ Success ++
+-->tool_usertours
+++ Success ++
+-->tool_xmldb
+++ Success ++
+-->cachestore_apcu
+++ Success ++
+-->cachestore_file
+++ Success ++
+-->cachestore_memcached
+++ Success ++
+-->cachestore_mongodb
+++ Success ++
+-->cachestore_redis
+++ Success ++
+-->cachestore_session
+++ Success ++
+-->cachestore_static
+++ Success ++
+-->cachelock_file
+++ Success ++
+-->fileconverter_googledrive
+++ Success ++
+-->fileconverter_unoconv
+++ Success ++
+-->contenttype_h5p
+++ Success ++
+-->theme_boost
+++ Success ++
+-->theme_classic
+++ Success ++
+-->h5plib_v124
+++ Success ++
+-->paygw_paypal
+++ Success ++
+-->assignsubmission_comments
+++ Success ++
+-->assignsubmission_file
+++ Success ++
+-->assignsubmission_onlinetext
+++ Success ++
+-->assignfeedback_comments
+++ Success ++
+-->assignfeedback_editpdf
+++ Success ++
+-->assignfeedback_file
+++ Success ++
+-->assignfeedback_offline
+++ Success ++
+-->assignment_offline
+++ Success ++
+-->assignment_online
+++ Success ++
+-->assignment_upload
+++ Success ++
+-->assignment_uploadsingle
+++ Success ++
+-->booktool_exportimscp
+++ Success ++
+-->booktool_importhtml
+++ Success ++
+-->booktool_print
+++ Success ++
+-->datafield_checkbox
+++ Success ++
+-->datafield_date
+++ Success ++
+-->datafield_file
+++ Success ++
+-->datafield_latlong
+++ Success ++
+-->datafield_menu
+++ Success ++
+-->datafield_multimenu
+++ Success ++
+-->datafield_number
+++ Success ++
+-->datafield_picture
+++ Success ++
+-->datafield_radiobutton
+++ Success ++
+-->datafield_text
+++ Success ++
+-->datafield_textarea
+++ Success ++
+-->datafield_url
+++ Success ++
+-->datapreset_imagegallery
+++ Success ++
+-->forumreport_summary
+++ Success ++
+-->ltiservice_basicoutcomes
+++ Success ++
+-->ltiservice_gradebookservices
+++ Success ++
+-->ltiservice_memberships
+++ Success ++
+-->ltiservice_profile
+++ Success ++
+-->ltiservice_toolproxy
+++ Success ++
+-->ltiservice_toolsettings
+++ Success ++
+-->quiz_grading
+++ Success ++
+-->quiz_overview
+++ Success ++
+-->quiz_responses
+++ Success ++
+-->quiz_statistics
+++ Success ++
+-->quizaccess_delaybetweenattempts
+++ Success ++
+-->quizaccess_ipaddress
+++ Success ++
+-->quizaccess_numattempts
+++ Success ++
+-->quizaccess_offlineattempts
+++ Success ++
+-->quizaccess_openclosedate
+++ Success ++
+-->quizaccess_password
+++ Success ++
+-->quizaccess_seb
+++ Success ++
+-->quizaccess_securewindow
+++ Success ++
+-->quizaccess_timelimit
+++ Success ++
+-->scormreport_basic
+++ Success ++
+-->scormreport_graphs
+++ Success ++
+-->scormreport_interactions
+++ Success ++
+-->scormreport_objectives
+++ Success ++
+-->workshopform_accumulative
+++ Success ++
+-->workshopform_comments
+++ Success ++
+-->workshopform_numerrors
+++ Success ++
+-->workshopform_rubric
+++ Success ++
+-->workshopallocation_manual
+++ Success ++
+-->workshopallocation_random
+++ Success ++
+-->workshopallocation_scheduled
+++ Success ++
+-->workshopeval_best
+++ Success ++
+-->atto_accessibilitychecker
+++ Success ++
+-->atto_accessibilityhelper
+++ Success ++
+-->atto_align
+++ Success ++
+-->atto_backcolor
+++ Success ++
+-->atto_bold
+++ Success ++
+-->atto_charmap
+++ Success ++
+-->atto_clear
+++ Success ++
+-->atto_collapse
+++ Success ++
+-->atto_emojipicker
+++ Success ++
+-->atto_emoticon
+++ Success ++
+-->atto_equation
+++ Success ++
+-->atto_fontcolor
+++ Success ++
+-->atto_h5p
+++ Success ++
+-->atto_html
+++ Success ++
+-->atto_image
+++ Success ++
+-->atto_indent
+++ Success ++
+-->atto_italic
+++ Success ++
+-->atto_link
+++ Success ++
+-->atto_managefiles
+++ Success ++
+-->atto_media
+++ Success ++
+-->atto_noautolink
+++ Success ++
+-->atto_orderedlist
+++ Success ++
+-->atto_recordrtc
+++ Success ++
+-->atto_rtl
+++ Success ++
+-->atto_strike
+++ Success ++
+-->atto_subscript
+++ Success ++
+-->atto_superscript
+++ Success ++
+-->atto_table
+++ Success ++
+-->atto_title
+++ Success ++
+-->atto_underline
+++ Success ++
+-->atto_undo
+++ Success ++
+-->atto_unorderedlist
+++ Success ++
+-->tinymce_ctrlhelp
+++ Success ++
+-->tinymce_managefiles
+++ Success ++
+-->tinymce_moodleemoticon
+++ Success ++
+-->tinymce_moodleimage
+++ Success ++
+-->tinymce_moodlemedia
+++ Success ++
+-->tinymce_moodlenolink
+++ Success ++
+-->tinymce_pdw
+++ Success ++
+-->tinymce_spellchecker
+++ Success ++
+-->tinymce_wrap
+++ Success ++
+-->logstore_database
+++ Success ++
+-->logstore_legacy
+++ Success ++
+-->logstore_standard
+++ Success ++
+Installation completed successfully.
