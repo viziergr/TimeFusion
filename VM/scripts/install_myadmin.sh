@@ -34,7 +34,7 @@ unzip /tmp/myadmin.zip -d ${WWW_REP} \
 
 rm /tmp/myadmin.zip
 
-echo "[3] - Configuration files for phpmyadmin  "
+echo "=> [3] - Configuration files for phpmyadmin  "
 ln -s ${WWW_REP}/phpMyAdmin-${MYADMIN_VERSION}-all-languages ${WWW_REP}/myadmin
 mkdir ${WWW_REP}/myadmin/tmp
 chown www-data:www-data ${WWW_REP}/myadmin/tmp
@@ -47,7 +47,7 @@ mysql -e "CREATE DATABASE phpmyadmin"
 mysql -e "GRANT ALL PRIVILEGES ON phpmyadmin.* TO 'pma'@'localhost' IDENTIFIED BY 'pmapass'"
 mysql < ${WWW_REP}/myadmin/sql/create_tables.sql 
 
-echo "[4] Restarting Apache..."
+echo "=> [4] Restarting Apache..."
 service apache2 restart
 
 cat <<EOF

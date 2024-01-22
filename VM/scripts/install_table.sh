@@ -13,29 +13,23 @@ echo "START - Création des tables - "$IP
 
 mysql -e "CREATE DATABASE TimeFusion;"
 
-echo "START - Table user"
+echo "[1] - Table user"
 mysql TimeFusion < /var/www/html/git/TimeFusion/sql/user.sql
-echo "END - Table user"
 
-echo "START - Table team"
+echo "[2] - Table team"
 mysql TimeFusion < /var/www/html/git/TimeFusion/sql/team.sql
-echo "END - Table team"
 
-echo "START - Table team_membership"
+echo "[3] - Table team_membership"
 mysql TimeFusion < /var/www/html/git/TimeFusion/sql/team_membership.sql
-echo "END - Table team_membership"
 
-echo "START - Table event"
+echo "[4] - Table event"
 mysql TimeFusion < /var/www/html/git/TimeFusion/sql/event.sql
-echo "END - Table event"
 
-echo "START - Table event_participant"
+echo "[5] - Table event_participant"
 mysql TimeFusion < /var/www/html/git/TimeFusion/sql/event_participant.sql
-echo "END - Table event_participant"
 
-echo "START - Table requests"
+echo "[6] - Table requests"
 mysql TimeFusion < /var/www/html/git/TimeFusion/sql/requests.sql
-echo "END - Table requests"
 
 service mariadb restart
 
