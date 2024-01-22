@@ -24,7 +24,6 @@ public class TimeFusionApp extends Application {
   public void start(Stage primaryStage) throws InterruptedException {
     if (JsonUtils.isLocalStorageEmpty()) {
       if (LoginManager.showLoginDialog()) {
-        EventsEntity.deleteAllEventEntities();
         initializeMainApplication(primaryStage);
       } else {
         Platform.exit();
