@@ -33,12 +33,9 @@ class Events {
     
         $sql = "SELECT DISTINCT event.* 
                 FROM event
-                LEFT JOIN event_participant ON event_participant.event_id = event.id 
-                WHERE (event.start_time BETWEEN '{$start->format('Y-m-d 00:00:00')}' AND '{$end->format('Y-m-d 23:59:59')}' 
-                AND event_participant.participant_id IN ($usersIdList))
-                OR (event.start_time BETWEEN '{$start->format('Y-m-d 00:00:00')}' AND '{$end->format('Y-m-d 23:59:59')}' 
-                AND event.creator_id IN ($usersIdList))";
-
+                JOIN event_participant ON event_participant.event_id = event.id 
+                WHERE event.start_time BETWEEN '{$start->format('Y-m-d 00:00:00')}' AND '{$end->format('Y-m-d 23:59:59')}' 
+                AND event_participant.participant_id IN ($usersIdList)";
     
         // Exécute la requête SQL
         $result = $this->mysqli->query($sql);
@@ -129,6 +126,12 @@ class Events {
     
         // Fermer le statement
         $stmt->close();
+
+        // Récupérer l'ID de l'événement récemment inséré
+        $eventId = $this->mysqli->insert_id;
+
+        // Ajouter le participant à l'événement
+        $this->addParticipant($eventId, $creatorId);
     
         return $result;
     }

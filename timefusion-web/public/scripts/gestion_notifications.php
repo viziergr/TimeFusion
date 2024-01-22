@@ -30,8 +30,8 @@ function traiterAcceptation() {
     $requests->accepterDemande($requestId);
 
     // Rediriger ou afficher un message de succès, etc.
-    // header('Location: /pages/needLog/requestpanel.php');
-    // exit();
+    header('Location: /pages/needLog/requestpanel.php');
+    exit();
 }
 
 function traiterRefus() {

@@ -188,80 +188,28 @@ class Requests
 
     // Méthode pour ajouter un membre à l'équipe
     private function ajouterMembreEquipe($teamId, $userId) {
-        try {
-            // Vérifier si le membre n'est pas déjà dans l'équipe
-            $sqlCheck = "SELECT COUNT(*) FROM team_membership WHERE team_id = ? AND user_id = ?";
-            $stmtCheck = $this->mysqli->prepare($sqlCheck);
-    
-            if (!$stmtCheck) {
-                throw new \Exception("Erreur de préparation de la requête de vérification : " . $this->mysqli->error);
-            }
-    
-            $stmtCheck->bind_param("ii", $teamId, $userId);
-    
-            if (!$stmtCheck->execute()) {
-                throw new \Exception("Erreur lors de l'exécution de la requête de vérification : " . $stmtCheck->error);
-            }
-    
-            $stmtCheck->bind_result($count);
-            $stmtCheck->fetch();
-            $stmtCheck->close();
-    
-            // Initialiser $count si aucune ligne n'est trouvée
-            $count = isset($count) ? $count : 0;
-    
-            // Si le membre n'est pas déjà dans l'équipe, l'ajouter
-            if ($count == 0) {
-                $sqlInsert = "INSERT INTO team_membership (team_id, user_id) VALUES (?, ?)";
-                $stmtInsert = $this->mysqli->prepare($sqlInsert);
-    
-                if (!$stmtInsert) {
-                    throw new \Exception("Erreur de préparation de la requête d'insertion : " . $this->mysqli->error);
-                }
-    
-                $stmtInsert->bind_param("ii", $teamId, $userId);
-    
-                if (!$stmtInsert->execute()) {
-                    throw new \Exception("Erreur lors de l'exécution de la requête d'insertion : " . $stmtInsert->error);
-                }
-    
-                $stmtInsert->close();
-            }else{
-                throw new \Exception("L'utilisateur est déjà dans l'équipe.");
-            }
-        } catch (\Exception $e) {
-            // Gérer l'erreur, par exemple, en journalisant, en affichant un message à l'utilisateur, etc.
-            echo "Erreur : " . $e->getMessage();
-        }
+        // Ajouter le membre à l'équipe sans effectuer de vérifications
+        $sqlInsert = "INSERT INTO team_membership (team_id, user_id) VALUES (?, ?)";
+        $stmtInsert = $this->mysqli->prepare($sqlInsert);
+        $stmtInsert->bind_param("ii", $teamId, $userId);
+        $stmtInsert->execute();
+        $stmtInsert->close();
     }
+    
     
 
     private function ajouterParticipantEvent($eventId, $userId) {
-        // Vérifier si le membre n'est pas déjà dans l'équipe
-        $sql = "SELECT COUNT(*) FROM event_participant WHERE event_id = ? AND participant_id = ?";
-        $stmt = $this->mysqli->prepare($sql);
-        $stmt->bind_param("ii", $eventId, $userId);
-        $stmt->execute();
-        $stmt->bind_result($count);
-        $stmt->fetch();
-        $stmt->close();
-
-        // Initialiser $count si aucune ligne n'est trouvée
-        $count = isset($count) ? $count : 0;
-
-        // Si le membre n'est pas déjà dans l'évènement, l'ajouter
-        if ($count == 0) {
-            $sql = "INSERT INTO event_participant (event_id, participant_id) VALUES (?, ?)";
-            $stmt = $this->mysqli->prepare($sql);
-            $stmt->bind_param("ii", $eventId, $userId);
-            $stmt->execute();
-            $stmt->close();
-        }
+        // Ajouter le membre à l'équipe sans effectuer de vérifications
+        $sqlInsert = "INSERT INTO event_participant (event_id, user_id) VALUES (?, ?)";
+        $stmtInsert = $this->mysqli->prepare($sqlInsert);
+        $stmtInsert->bind_param("ii", $teamId, $userId);
+        $stmtInsert->execute();
+        $stmtInsert->close();
     }
 
     // Méthode pour récupérer les informations d'une demande par son ID
     private function getRequestById($requestId) {
-        $sql = "SELECT team_id, user_id, type FROM requests WHERE id = ?";
+        $sql = "SELECT team_id, user_id FROM requests WHERE id = ?";
         $stmt = $this->mysqli->prepare($sql);
         $stmt->bind_param("i", $requestId);
         $stmt->execute();
@@ -310,7 +258,7 @@ class Requests
     
     
     // Méthode pour vérifier si la user_id existe dans la table user
-    private function checkUserExists($userId) : bool {
+    private function checkUserExists($userId) {
         $sql = "SELECT COUNT(*) FROM user WHERE id = ?";
         $stmt = $this->mysqli->prepare($sql);
         $stmt->bind_param("i", $userId);
@@ -358,15 +306,12 @@ class Requests
         $stmt = $this->mysqli->prepare($sql);
 
         if (!$stmt) {
-            throw new \Exception("Erreur lors de la préparation de la requête d'insertion de demande d'invitation. Détails : " . $this->mysqli->error);
+            $error = error_get_last();
+            throw new \Exception("Erreur lors de la préparation de la requête d'insertion de demande d'invitation. Détails : " . print_r($sql));
         }
     
         $stmt->bind_param("ii", $guestId, $eventId);
-
-        if (!$stmt->execute()) {
-            throw new \Exception("Erreur lors de l'exécution de la requête de vérification : " . $stmt->error);
-        }
-
+        $stmt->execute();
         $stmt->close();
 
         // Valider la transaction

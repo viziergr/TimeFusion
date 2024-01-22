@@ -16,9 +16,9 @@
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="4.0" layoutY="221.0" text="timefusion@support.com">
+            <Label layoutX="4.0" layoutY="221.0" text="timefusion.calendar@gmail.com">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="18.0" />
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
                </font>
             </Label>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">

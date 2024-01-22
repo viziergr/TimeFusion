@@ -19,7 +19,7 @@ public class TimeFusionLauncher {
     1
   );
   private static final int INITIAL_DELAY_SECONDS = 0;
-  private static final int SCHEDULE_INTERVAL_SECONDS = 2;
+  private static final int SCHEDULE_INTERVAL_SECONDS = 1;
 
   public static void main(String[] args) {
     try {
