@@ -10,40 +10,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['connexion_submit']) &
 
     // Code de traitement du formulaire de connexion ici
     $mail_escaped = $mysqli->real_escape_string(trim($_POST['mail']));
-    $password_escaped = $mysqli->real_escape_string(trim($_POST['password']));
-    $recupereMdp = "SELECT password FROM user WHERE email = '$mail_escaped'";
-    $result = $mysqli->query($recupereMdp);
-    password_verify($password_escaped, $result);
+    $password_plain = trim($_POST['password']);  // Mot de passe non échappé
 
-    $sql = "SELECT id
-                FROM user
-                WHERE email = '" . $mail_escaped . "'
-                AND password = '" . $password_escaped . "'";
+    $sql = "SELECT id, password
+            FROM user
+            WHERE email = '" . $mail_escaped . "'";
 
-    // $result = $mysqli->query($sql);
+    $result = $mysqli->query($sql);
     if (!$result) {
-        $error = "Vérifiez votre adresse e-mail et votre mot de passe, puis réessayez.\nIl se peut que vous n'ayez pas créé de compte.";
+        $error = "Erreur lors de la vérification de l'adresse e-mail. Veuillez réessayer.";
         exit($mysqli->error);
     }
 
     $nb = $result->num_rows;
     if ($nb) {
-        if ($result) {
-            //récupération de l’id de l’étudiant
-            $row = $result->fetch_assoc();
+        // Récupération de l'id de l'utilisateur et du mot de passe haché
+        $row = $result->fetch_assoc();
+        $hashed_password_stored = $row['password'];
+
+        // Vérification du mot de passe avec crypt
+        if (password_verify($password_plain, $hashed_password_stored)) {
             $_SESSION['compte'] = $row['id'];
 
-            $sqlEtudiant = "SELECT id, first_name, last_name, email, password, year FROM user WHERE id = {$row['id']}";
-            $resultEtudiant = $mysqli->query($sqlEtudiant);
-            $nbEtu = $resultEtudiant->num_rows;
-            if ($nbEtu) {
-                $rowEtu = $resultEtudiant->fetch_assoc();
+            $sqlUser = "SELECT id, first_name, last_name, email, password, year FROM user WHERE id = {$row['id']}";
+            $resultUser = $mysqli->query($sqlUser);
+            $nbUser = $resultUser->num_rows;
+            if ($nbUser) {
+                $rowUser = $resultUser->fetch_assoc();
                 header("Location: ./needLog/Calendrier.php");
             }
+        } else {
+            $error = "Vérifiez votre adresse e-mail et votre mot de passe, puis réessayez.";
         }
-        else{
-            $error = "Vérifiez votre adresse e-mail et votre mot de passe, puis réessayez.\nIl se peut que vous n'ayez pas créé de compte.";
-        }
+    } else {
+        $error = "Vérifiez votre adresse e-mail et votre mot de passe, puis réessayez.";
     }
 
     // Fermer la connexion après avoir terminé le traitement
@@ -55,3 +55,4 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
     header("Location: /index.html");
 }
 
+?>

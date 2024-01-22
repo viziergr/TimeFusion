@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <title>Modifier le mot de passe</title>
-    <link rel="stylesheet" href="/../assets/CSS/code.css">
+    <link rel="stylesheet" href="/../../CSS\code.css">
 </head>
 <body>
     <div class="modifPassword">

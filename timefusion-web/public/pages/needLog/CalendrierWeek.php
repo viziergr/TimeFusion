@@ -3,7 +3,7 @@
 include __DIR__ .'/../../scripts/bootstrap.php';
 include __DIR__ .'/../../scripts/Calendar/Week.php';
 include __DIR__ .'/../../scripts/Calendar/Events.php'; 
-include __DIR__ .'/../../scripts/Team/Teams.php';   
+include __DIR__ .'/../../scripts/Team/Teams.php';    
 
 sess_exists();
 
@@ -20,15 +20,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['users_id'])) {
 } else {
     $usersId = [$_SESSION['compte']];
 }
-$events = $events->getEventsBetweenByDay($start, $end, $usersId);
-require __DIR__ .'/../../views/header.php';
+$events = $events->getCoEventsBetweenByDay($start, $end, $usersId);
+include __DIR__ .'/../../includes/header.php';
 ?>
 
 <div class="calendar">
     <div class='d-flex flex-row align-items-center justify-content-between mx-sm-3'>
         <h1><?= $week->__toString(); ?></h1>
         <div class='d-flex flex-row'>
-            <form action="Calendrier.php" method="post" style="padding-right:10%">
+            <form action="Calendrier.php" method="post">
                 <input type="hidden" name="users_id" value="<?= implode(',', $usersId); ?>">
                 <button type="submit" class='btn btn-primary'>Mois</button>
             </form>
@@ -82,7 +82,7 @@ require __DIR__ .'/../../views/header.php';
                         $eventStart = new DateTime($event['start_time']);
                         $eventEnd = new DateTime($event['end_time']);
                         if ($eventStart->format('H:i:s') <= $hour->format('H:i:s') && $eventEnd->format('H:i:s') > $hour->format('H:i:s')) {
-                            $eventData .= '<div class="calendar__event">' . (new \DateTime($event['start_time']))->format('H:i') . ' - ' . (new \DateTime($event['end_time']))->format('H:i') . ' : <a href="edit.php?id=' . $event['id'] . '">' . h($event['title']) . '</a></div>';
+                            $eventData .= "<div class='calendar__event'>{". h($event['title']). "}</div>";
                         }
                     }
                     ?>
@@ -99,9 +99,9 @@ require __DIR__ .'/../../views/header.php';
 
     </table>
 
-    <a href="/PHP/public/needLog/add.php" class="calendar__button">+</a>
+    <a href="add.php" class="calendar__button">+</a>
 </div>
 
 <?php 
-require __DIR__ .'/../../views/footer.php';
+include __DIR__ .'/../../includes/footer.php';
 ?>

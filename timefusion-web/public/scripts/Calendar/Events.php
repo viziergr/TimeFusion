@@ -22,13 +22,20 @@ class Events {
      * @param \DateTime $end The end date.
      * @return array The array of events between the specified dates.
      */
-    public function getEventsBetween (\DateTime $start, \DateTime $end, $usersId): array {
+
+    public function getCoEventsBetween (\DateTime $start, \DateTime $end, $usersId): array {
         // Convertit la liste d'ids en une chaîne pour l'utilisation dans la requête SQL
-        $usersIdList = implode(',', array_map('intval', $usersId));
+        if(is_array($usersId)){
+            $usersIdList = implode(',', array_map('intval', $usersId));
+        }else{
+            $usersIdList = $usersId;
+        }
     
-        $sql = "SELECT * FROM event 
-                WHERE start_time BETWEEN '{$start->format('Y-m-d 00:00:00')}' AND '{$end->format('Y-m-d 23:59:59')}' 
-                AND creator_id IN ($usersIdList)";
+        $sql = "SELECT DISTINCT event.* 
+                FROM event
+                JOIN event_participant ON event_participant.event_id = event.id 
+                WHERE event.start_time BETWEEN '{$start->format('Y-m-d 00:00:00')}' AND '{$end->format('Y-m-d 23:59:59')}' 
+                AND event_participant.participant_id IN ($usersIdList)";
     
         // Exécute la requête SQL
         $result = $this->mysqli->query($sql);
@@ -47,18 +54,9 @@ class Events {
     
         return $eventsData;
     }
-    
-    
-    
-    /**
-     * Get events between two dates grouped by day.
-     *
-     * @param \DateTime $start The start date.
-     * @param \DateTime $end The end date.
-     * @return array The array of events between the specified dates, grouped by day.
-     */
-    public function getEventsBetweenByDay (\DateTime $start, \DateTime $end, array $usersId): array {
-        $events = $this->getEventsBetween($start, $end, $usersId);
+
+    public function getCoEventsBetweenByDay(\DateTime $start, \DateTime $end, $usersId): array {
+        $events = $this->getCoEventsBetween($start, $end, $usersId);
 
         $days = [];
 
@@ -72,6 +70,7 @@ class Events {
         }
         return $days;
     }
+    
 
     /**
      * Finds an event by its ID.
@@ -127,6 +126,12 @@ class Events {
     
         // Fermer le statement
         $stmt->close();
+
+        // Récupérer l'ID de l'événement récemment inséré
+        $eventId = $this->mysqli->insert_id;
+
+        // Ajouter le participant à l'événement
+        $this->addParticipant($eventId, $creatorId);
     
         return $result;
     }
@@ -143,6 +148,51 @@ class Events {
             $event->getId()
         ]);
     }
-}
 
+/**
+     * Get participants for a specific event.
+     *
+     * @param int $eventId The ID of the event.
+     * @return array The array of participants for the specified event.
+     */
+    public function getParticipants(int $eventId): array {
+        $sql = "SELECT user.* 
+                FROM event_participant
+                JOIN user ON user.id = event_participant.participant_id 
+                WHERE event_participant.event_id = $eventId";
+        $result = $this->mysqli->query($sql);
+
+        if (!$result) {
+            echo "Error in query: " . $this->mysqli->error;
+            return [];
+        }
+
+        $participantsData = $result->fetch_all(MYSQLI_ASSOC);
+        $result->free_result();
+
+        return $participantsData;
+    }
+
+    /**
+     * Add a participant to an event.
+     *
+     * @param int $eventId The ID of the event.
+     * @param int $participantId The ID of the participant.
+     * @return bool True if successful, false otherwise.
+     */
+    public function addParticipant(int $eventId, int $participantId): bool {
+        $sql = "INSERT INTO event_participant (event_id, participant_id) VALUES (?, ?)";
+        $stmt = $this->mysqli->prepare($sql);
+
+        if (!$stmt) {
+            return false;
+        }
+
+        $stmt->bind_param("ii", $eventId, $participantId);
+        $result = $stmt->execute();
+        $stmt->close();
+
+        return $result;
+    }
+}
 ?>

@@ -33,6 +33,9 @@ if (isset($_POST['inscription_submit']) && $_POST['inscription_submit'] == 2) {
         $check_email_query = "SELECT * FROM user WHERE email = '$mail_escaped'";
         $email_result = $mysqli->query($check_email_query);
 
+        $hashedPassword = crypt($pwd, '$2y$12$' . bin2hex(random_bytes(22)));
+        $password_escaped = $mysqli->real_escape_string(trim($hashedPassword));
+        
         if ($email_result->num_rows > 0) {
             // L'email existe déjà dans la base de données
             $error = "Cet e-mail est déjà associé à un compte existant.";
@@ -43,7 +46,8 @@ if (isset($_POST['inscription_submit']) && $_POST['inscription_submit'] == 2) {
                 while (!$id_defined) {
                     try {
                         $id = rand();
-                        $sql = "INSERT INTO user (id, first_name, last_name, email, password, year) VALUES ('$id','$nom', '$prenom', '$email', '$pwd', '$annee')";
+                        $hashedPassword = password_hash($pwd, PASSWORD_DEFAULT);
+                        $sql = "INSERT INTO user (id, first_name, last_name, email, password, year) VALUES ('$id','$nom', '$prenom', '$email', '$hashedPassword', '$annee')";
                         $mysqli->query($sql);
                         $id_defined = true;
                         header("Location: ./needLog/Calendrier.php");
