@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
  */
 public final class ValidationUtil {
 
-  private static final int MAX_EMAIL_LENGTH = 75;
+  private static final int MAX_EMAIL_LENGTH = 45;
   private static final int MIN_EMAIL_LENGTH = 5;
   private static final int MAX_PASSWORD_LENGTH = 20;
   private static final int MIN_PASSWORD_LENGTH = 8;

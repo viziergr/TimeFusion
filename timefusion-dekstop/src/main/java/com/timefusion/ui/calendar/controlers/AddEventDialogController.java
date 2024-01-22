@@ -114,7 +114,7 @@ public class AddEventDialogController {
     String startTime = formatTime(fromTextField.getText());
     String endTime = formatTime(toTextField.getText());
 
-    boolean isPrivate = eventIsPrivate();
+    boolean isPrivate = eventIsPrivate() ? eventIsPrivate() : false;
 
     DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     String formattedDate = date.format(dateFormatter);
@@ -273,10 +273,10 @@ public class AddEventDialogController {
    */
   private void validateTitle(TextField textField) {
     String input = textField.getText().trim();
-    if (input.length() > 100) {
+    if (input.length() > 45) {
       showErrorAlert(
         "Title is Too Long",
-        "Title cannot exceed 100 characters.",
+        "Title cannot exceed 45 characters.",
         textField
       );
     }
@@ -290,7 +290,7 @@ public class AddEventDialogController {
    */
   private void validateLocation(TextField textField) {
     String input = textField.getText().trim();
-    if (input.length() > 50) {
+    if (input.length() > 45) {
       showErrorAlert(
         "Location is Too Long",
         "Location cannot exceed 50 characters.",
@@ -307,7 +307,7 @@ public class AddEventDialogController {
    */
   private void validateDescription(TextField textField) {
     String input = textField.getText().trim();
-    if (input.length() > 150) {
+    if (input.length() > 255) {
       showErrorAlert(
         "Description is Too Long",
         "Description cannot exceed 150 characters.",
