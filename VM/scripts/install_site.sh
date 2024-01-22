@@ -66,7 +66,7 @@ sudo mv /var/www/html/myadmin /var/www/html/TimeFusion/timefusion-web/public/
 
 echo "=> [6] - Modification de la configuration de myadmin"
 
-rm /var/www/html/TimeFusion/timefusion-web/public/myadmin/config.inc.php
+# rm /var/www/html/TimeFusion/timefusion-web/public/myadmin/config.inc.php
 # echo "$i++;
 # /* Authentication type */
 # $cfg['Servers'][$i]['auth_type'] = 'cookie';
