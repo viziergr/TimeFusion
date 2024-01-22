@@ -10,21 +10,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['connexion_submit']) &
 
     // Code de traitement du formulaire de connexion ici
     $mail_escaped = $mysqli->real_escape_string(trim($_POST['mail']));
-    $password_escaped = password_verify($mysqli->real_escape_string(trim($_POST['password'])), PASSWORD_DEFAULT);
+    $password_escaped = $mysqli->real_escape_string(trim($_POST['password']));
+    $recupereMdp = "SELECT password FROM user WHERE email = '$mail_escaped'";
+    $result = $mysqli->query($recupereMdp);
+    password_verify($password_escaped, $result);
 
     $sql = "SELECT id
                 FROM user
                 WHERE email = '" . $mail_escaped . "'
                 AND password = '" . $password_escaped . "'";
 
-    $result = $mysqli->query($sql);
+    // $result = $mysqli->query($sql);
     if (!$result) {
         $error = "Vérifiez votre adresse e-mail et votre mot de passe, puis réessayez.\nIl se peut que vous n'ayez pas créé de compte.";
         exit($mysqli->error);
     }
 
     $nb = $result->num_rows;
-    if ($nb) {
+    // if ($nb) {
+    if ($result) {
         //récupération de l’id de l’étudiant
         $row = $result->fetch_assoc();
         $_SESSION['compte'] = $row['id'];
