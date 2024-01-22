@@ -46,16 +46,16 @@ $userList = $users->getEveryOtherUsers($userId);
                     <button type="submit" name="add_event">Inviter à rejoindre l'évènement</button>
                 </form>
             <?php else: ?>
-            <form action='../../scripts/gestion_notifications.php' method="post">
-                <input type="hidden" name="user_id" value="<?= $user->getId(); ?>">
-                <?php 
-                    if (isset($_GET['team_id'])){
-                        $teamId = $_GET['team_id'];
-                    }
-                ?>
-                <input type="hidden" name="team_id" value="<?= $teamId; ?>">
-                <button type="submit" name="add_team">Ajouter à une équipe</button>
-            </form>
+                <form action='../../scripts/gestion_notifications.php' method="post">
+                    <input type="hidden" name="user_id" value="<?= $user->getId(); ?>">
+                    <?php 
+                        if (isset($_GET['team_id'])){
+                            $teamId = $_GET['team_id'];
+                        }
+                    ?>
+                    <input type="hidden" name="team_id" value="<?= $teamId; ?>">
+                    <button type="submit" name="add_team">Ajouter à une équipe</button>
+                </form>
             <?php endif; ?>
         </div>
     <?php endforeach; ?>

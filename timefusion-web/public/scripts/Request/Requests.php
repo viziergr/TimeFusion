@@ -337,7 +337,7 @@ class Requests
 
         if (!$stmt) {
             $error = error_get_last();
-            throw new \Exception("Erreur lors de la préparation de la requête d'insertion de demande d'invitation. Détails : " . print_r($error, true));
+            throw new \Exception("Erreur lors de la préparation de la requête d'insertion de demande d'invitation. Détails : " . print_r($sql));
         }
     
         $stmt->bind_param("ii", $guestId, $eventId);
