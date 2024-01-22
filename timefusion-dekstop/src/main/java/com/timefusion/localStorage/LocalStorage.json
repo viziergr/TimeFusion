@@ -1,35 +1,14 @@
 [
   {
-    "information": {
-      "last_updated": "22-01-2024 16:28:23",
-      "last_synced": "22-01-2024 16:28:23"
-    }
+    "information": {}
   },
   {
-    "user": {
-      "id": 1328757373,
-      "first_name": "Robin",
-      "last_name": "corentin.robin44@gmail.Com",
-      "email": "Corentin",
-      "password": "$2y$12$73c1e16986b144ff49fb3uc30MZUmOAR925EfCk1hevnnF2YU6isW"
-    }
+    "user": {}
   },
   {
     "teams": []
   },
   {
-    "events": [
-      {
-        "id": 4,
-        "nature": "Unchanged",
-        "is_private": true,
-        "title": "Corentin",
-        "description": "",
-        "location": "",
-        "start_time": "2024-01-23 10:00:00",
-        "end_time": "2024-01-23 11:00:00",
-        "participants": []
-      }
-    ]
+    "events": []
   }
 ]
