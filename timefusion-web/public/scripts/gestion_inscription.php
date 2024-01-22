@@ -46,7 +46,7 @@ if (isset($_POST['inscription_submit']) && $_POST['inscription_submit'] == 2) {
                 while (!$id_defined) {
                     try {
                         $id = rand();
-                        $sql = "INSERT INTO user (id, first_name, last_name, email, password, year) VALUES ('$id','$nom', '$prenom', '$email', '$pwd', '$annee')";
+                        $sql = "INSERT INTO user (id, first_name, last_name, email, password, year) VALUES ('$id','$nom', '$prenom', '$email', '$hashedPassword', '$annee')";
                         $mysqli->query($sql);
                         $id_defined = true;
                         header("Location: ./needLog/Calendrier.php");
