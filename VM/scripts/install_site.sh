@@ -32,17 +32,14 @@ else
     cd "$repertoire" || exit
 
     echo "=> [1] - Git clone"
-    git clone "https://github.com/viziergr/Projet-InfraLogiciel.git"
+    git clone "https://github.com/viziergr/TimeFusion.git"
 
     cd Projet-InfraLogiciel || exit
 
-    echo "=> [2] - Git checkout gregoire/testArchitecture"
-    git checkout gregoire/testArchitecture
-
-    echo "=> [3] - Configuration du git pull"
+    echo "=> [2] - Configuration du git pull"
     git config pull.rebase false --global
 
-    echo "=> [4] - Suppression des fichiers inutiles"
+    echo "=> [3] - Suppression des fichiers inutiles"
     # Suppression de tous les autres fichiers inutiles
     rm -r /var/www/html/Projet-InfraLogiciel/.vscode
     rm -r /var/www/html/Projet-InfraLogiciel/livrables
@@ -53,7 +50,7 @@ else
     rm /var/www/html/Projet-InfraLogiciel/README.md
 fi
 
-echo "[5] - Modification de la configuration du site 000-default.conf"
+echo "=> [4] - Modification de la configuration du site 000-default.conf"
 # Vérifier si la chaîne de caractères à rechercher existe dans le fichier
 if grep -q "$nouvelle_chaine" "$fichier_conf"; then
     # La chaîne existe, ne rien faire
@@ -64,7 +61,7 @@ else
     echo "=> La chemin d'accès au site a été modifié."
 fi
 
-echo "=> [6] - Déplacement de /myadmin/"
+echo "=> [5] - Déplacement de /myadmin/"
     sudo mv /var/www/html/myadmin /var/www/html/Projet-InfraLogiciel/timefusion-web/public/
 
 service apache2 reload
