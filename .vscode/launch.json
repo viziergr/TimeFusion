@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TimeFusionLauncher",
+            "request": "launch",
+            "mainClass": "com.timefusion/com.launcher.TimeFusionLauncher",
+            "projectName": "timefusion-dekstop"
+        },
+        {
+            "type": "java",
             "name": "SyncScheduler",
             "request": "launch",
             "mainClass": "com.timefusion/com.timefusion.sync.SyncScheduler",
