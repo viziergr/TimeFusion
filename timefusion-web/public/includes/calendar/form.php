@@ -38,6 +38,17 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label for="is_private">Évènement privé ?</label>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="is_private" id="is_private" <?= isset($data['is_private']) && $data['is_private'] ? 'checked' : '' ?>>
+                <label class="form-check-label" for="is_private">Oui</label>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="form-group">
     <label for="description">Description</label>
     <textarea name="description" id="description" class="form-control"><?= isset($data['description']) ? $data['description'] : '' ?></textarea>
