@@ -300,8 +300,10 @@ public class EventsEntity {
     JsonArray eventsJsonArray = getAllEventEntities();
     for (JsonElement eventElement : eventsJsonArray) {
       JsonObject eventObject = eventElement.getAsJsonObject();
-      int eventId = eventObject.get("id").getAsInt();
-      EventsEntity.deleteEventEntity(eventId);
+      if (!eventObject.isEmpty()) {
+        int eventId = eventObject.get("id").getAsInt();
+        EventsEntity.deleteEventEntity(eventId);
+      }
     }
   }
 
