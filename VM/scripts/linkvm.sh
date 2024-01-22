@@ -21,26 +21,6 @@ echo "=> [2] - Modification des fichiers de configuration"
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf
 sed -i 's/# port = 3306/port = 3306/g' /etc/mysql/my.cnf
 
-echo "=> [3] - Modification de la configuration de myadmin"
-
-rm /var/www/html/TimeFusion/timefusion-web/public/myadmin/config.inc.php
-echo "$i++;
-/* Authentication type */
-$cfg['Servers'][$i]['auth_type'] = 'cookie';
-/* Server parameters */
-$cfg['Servers'][$i]['host'] = '192.168.56.81';
-$cfg['Servers'][$i]['compress'] = false;
-$cfg['Servers'][$i]['AllowNoPassword'] = false;
-
-/**
- * phpMyAdmin configuration storage settings.
- */
-
-/* User used to manipulate with storage */
-$cfg['Servers'][$i]['controlhost'] = '';
-$cfg['Servers'][$i]['controlport'] = '';
-$cfg['Servers'][$i]['controluser'] = 'pma';
-$cfg['Servers'][$i]['controlpass'] = 'pmapass';">>/var/www/html/TimeFusion/timefusion-web/public/myadmin/config.inc.php
 service mariadb restart
 
 echo "END - Link des deux VM"
