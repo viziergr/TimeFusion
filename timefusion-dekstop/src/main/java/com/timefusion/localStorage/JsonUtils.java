@@ -35,12 +35,11 @@ public class JsonUtils {
   }
 
   public static boolean isLocalStorageEmpty() {
-    return (
-      InformationEntity.isJsonInformationEntityEmpty() &&
-      UserEntity.isJsonUserEntityEmpty() &&
-      TeamsEntity.isJsonTeamEntityEmpty() &&
-      EventsEntity.isJsonEventsEntityEmpty()
-    );
+    try {
+      return (UserEntity.isJsonUserEntityEmpty());
+    } catch (Exception e) {
+      return false;
+    }
   }
 
   /**
