@@ -35,6 +35,10 @@ public class EncryptionUtil {
     return BCrypt.checkpw(password, migratePassword(hashedPassword));
   }
 
+  // public static boolean verifyPassword(String password, String hashedPassword) {
+  //   return password.equals(hashedPassword);
+  // }
+
   private static String migratePassword(String hashedPasswordWithOldPrefix) {
     if (hashedPasswordWithOldPrefix.startsWith("$2a$")) {
       return hashedPasswordWithOldPrefix; // No need to migrate, already using $2a

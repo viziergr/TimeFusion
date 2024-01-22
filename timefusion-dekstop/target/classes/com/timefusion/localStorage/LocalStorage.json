@@ -1,18 +1,19 @@
 [
   {
     "information": {
-      "last_updated": "22-01-2024 12:27:37"
+      "last_updated": "22-01-2024 12:50:03"
     }
   },
   {
-    "user": {}
+    "user": {
+    }
   },
   {
     "teams": []
   },
   {
     "events": [
-      {}
+      
     ]
   }
 ]
