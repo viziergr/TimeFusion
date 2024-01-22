@@ -27,19 +27,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['connexion_submit']) &
     }
 
     $nb = $result->num_rows;
-    // if ($nb) {
-    if ($result) {
-        //récupération de l’id de l’étudiant
-        $row = $result->fetch_assoc();
-        $_SESSION['compte'] = $row['id'];
+    if ($nb) {
+        if ($result) {
+            //récupération de l’id de l’étudiant
+            $row = $result->fetch_assoc();
+            $_SESSION['compte'] = $row['id'];
 
-        $sqlEtudiant = "SELECT id, first_name, last_name, email, password, year FROM user WHERE id = {$row['id']}";
-        $resultEtudiant = $mysqli->query($sqlEtudiant);
-        $nbEtu = $resultEtudiant->num_rows;
-        if ($nbEtu) {
-            $rowEtu = $resultEtudiant->fetch_assoc();
-            header("Location: ./needLog/Calendrier.php");
-        }
+            $sqlEtudiant = "SELECT id, first_name, last_name, email, password, year FROM user WHERE id = {$row['id']}";
+            $resultEtudiant = $mysqli->query($sqlEtudiant);
+            $nbEtu = $resultEtudiant->num_rows;
+            if ($nbEtu) {
+                $rowEtu = $resultEtudiant->fetch_assoc();
+                header("Location: ./needLog/Calendrier.php");
+            }
     }
     else{
         $error = "Vérifiez votre adresse e-mail et votre mot de passe, puis réessayez.\nIl se peut que vous n'ayez pas créé de compte.";
