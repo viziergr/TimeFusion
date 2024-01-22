@@ -5,7 +5,7 @@
 <html lang=en>
 <head>
     <title>Réinitialisation du mot de passe</title>
-    <link rel="stylesheet" href="..\..\CSS\code.css">
+    <link rel="stylesheet" href="../assets/CSS/code.css">
     <style>
         input[type="email"] {
             background-color: transparent;
@@ -17,7 +17,7 @@
 <body>
     <div class="bande">
         <a href="index.html">
-            <img id="home" src="..\..\pictures\home.png" alt="Accueil">
+            <img id="home" src="../../pictures/home.png" alt="Accueil">
         </a>
     </div>
     
