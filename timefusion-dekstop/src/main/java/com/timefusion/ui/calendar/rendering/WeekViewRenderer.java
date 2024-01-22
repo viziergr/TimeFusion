@@ -132,7 +132,7 @@ public class WeekViewRenderer {
     final ToggleButton onlineOfflineButton = new ToggleButton();
     Timeline timeline = new Timeline(
       new KeyFrame(
-        Duration.seconds(10),
+        Duration.seconds(5),
         event -> updateToggleButtonGraphic(onlineOfflineButton)
       )
     );
