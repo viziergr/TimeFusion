@@ -57,7 +57,6 @@ Vagrant.configure("2") do |config|
     machine.vm.provision "shell", path: "scripts/install_sys.sh"
     machine.vm.provision "shell", path: "scripts/install_web.sh"
     machine.vm.provision "shell", path: "scripts/install_bdd.sh"
-    # machine.vm.provision "shell", path: "scripts/install_myadmin.sh"
     machine.vm.provision "shell", path: "scripts/linkvm.sh"
     machine.vm.provision "shell", path: "scripts/recup_sql.sh"
     machine.vm.provision "shell", path: "scripts/install_table.sh"
