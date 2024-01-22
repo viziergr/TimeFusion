@@ -8,9 +8,9 @@ require __DIR__ .'/../../src/Team/Teams.php';
 sess_exists();
 
 $mysqli = connectDB();
-$events = new TimeFusion/Calendar/Events($mysqli);
-$week = new TimeFusion/Calendar/Week($_GET['week'] ?? null, $_GET['year'] ?? null); // Utilisez la classe Week
-$teams = new TimeFusion/Team/Teams($mysqli);
+$events = new TimeFusion\Calendar\Events($mysqli);
+$week = new TimeFusion\Calendar\Week($_GET['week'] ?? null, $_GET['year'] ?? null); // Utilisez la classe Week
+$teams = new TimeFusion\Team\Teams($mysqli);
 $start = $week->getFirstDay();
 $end = $week->getLastDay();
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['users_id'])) {
