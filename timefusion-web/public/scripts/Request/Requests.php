@@ -377,7 +377,7 @@ class Requests
         $this->mysqli->begin_transaction();
 
         // Insérer une nouvelle demande d'invitation dans la base de données
-        $sql = "INSERT INTO requests (user_id, event_id, status, type) VALUES (?, ?, 'en_attente', 'event')";
+        $sql = "INSERT INTO requests (user_id, team_id, status, type) VALUES (?, ?, 'en_attente', 'event')";
         $stmt = $this->mysqli->prepare($sql);
 
         if (!$stmt) {
