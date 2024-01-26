@@ -129,12 +129,6 @@ class Events {
     
         // Fermer le statement
         $stmt->close();
-
-        // Récupérer l'ID de l'événement récemment inséré
-        $eventId = $this->mysqli->insert_id;
-
-        // Ajouter le participant à l'événement
-        $this->addParticipant($eventId, $creatorId);
     
         return $result;
     }
