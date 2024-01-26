@@ -1,14 +1,119 @@
 [
   {
-    "information": {}
+    "information": {
+      "last_updated": "26-01-2024 09:33:23",
+      "last_synced": "26-01-2024 09:33:23"
+    }
   },
   {
-    "user": {}
+    "user": {
+      "id": 1328757373,
+      "first_name": "Robin",
+      "last_name": "corentin.robin44@gmail.Com",
+      "email": "Corentin",
+      "password": "$2y$12$73c1e16986b144ff49fb3uc30MZUmOAR925EfCk1hevnnF2YU6isW"
+    }
   },
   {
     "teams": []
   },
   {
-    "events": []
+    "events": [
+      {
+        "id": 10,
+        "nature": "Unchanged",
+        "is_private": true,
+        "title": "Greg",
+        "description": "r",
+        "location": "eseo",
+        "start_time": "2024-01-24 12:00:00",
+        "end_time": "2024-01-24 12:30:00",
+        "participants": []
+      },
+      {
+        "id": 11,
+        "nature": "Unchanged",
+        "is_private": true,
+        "title": "foot",
+        "description": "Foot",
+        "location": " ",
+        "start_time": "2024-01-26 10:00:00",
+        "end_time": "2024-01-26 11:00:00",
+        "participants": []
+      },
+      {
+        "id": 12,
+        "nature": "Unchanged",
+        "is_private": true,
+        "title": "Bowling",
+        "description": "Bowling",
+        "location": " ",
+        "start_time": "2024-01-27 12:00:00",
+        "end_time": "2024-01-27 13:00:00",
+        "participants": []
+      },
+      {
+        "id": 13,
+        "nature": "Unchanged",
+        "is_private": false,
+        "title": "Golf",
+        "description": "Golf",
+        "location": "Nantes",
+        "start_time": "2024-01-26 10:00:00",
+        "end_time": "2024-01-26 10:30:00",
+        "participants": []
+      },
+      {
+        "id": 14,
+        "nature": "Unchanged",
+        "is_private": true,
+        "title": "Basketball",
+        "description": "basket",
+        "location": "ESEO",
+        "start_time": "2024-01-27 11:30:00",
+        "end_time": "2024-01-27 12:30:00",
+        "participants": []
+      },
+      {
+        "id": 15,
+        "nature": "Unchanged",
+        "is_private": false,
+        "title": "Enzo",
+        "description": "Enzo",
+        "location": "ESEO",
+        "start_time": "2024-01-27 11:45:00",
+        "end_time": "2024-01-27 12:15:00",
+        "participants": []
+      },
+      {
+        "id": 16,
+        "nature": "Unchanged",
+        "is_private": true,
+        "title": "ENZO2",
+        "description": "ENZOOOOOOOOOOOOOOOO",
+        "location": " ",
+        "start_time": "2024-01-26 10:10:00",
+        "end_time": "2024-01-26 11:11:00",
+        "participants": []
+      },
+      {
+        "id": 17,
+        "nature": "Invited",
+        "is_private": true,
+        "title": "TEST",
+        "description": "gzrezg",
+        "location": " ",
+        "start_time": "2024-01-26 14:00:00",
+        "end_time": "2024-01-26 15:00:00",
+        "participants": [
+          {
+            "id": 1851144698,
+            "first_name": "Vizier",
+            "last_name": "gregoire.vizier@gmail.com",
+            "email": "Grégoire"
+          }
+        ]
+      }
+    ]
   }
 ]

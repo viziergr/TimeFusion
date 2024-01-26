@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class EventsEntity {
+public class EventsEntity implements JsonEntity {
 
   private int id;
   private EventNature nature;
@@ -307,7 +307,8 @@ public class EventsEntity {
     }
   }
 
-  private JsonObject toJsonObject() {
+  @Override
+  public JsonObject toJsonObject() {
     JsonObject jsonObject = new JsonObject();
     jsonObject.addProperty("id", id);
     jsonObject.addProperty("nature", nature.toString());
@@ -382,5 +383,11 @@ public class EventsEntity {
       );
     }
     return false;
+  }
+
+  @Override
+  public String toJson() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'toJson'");
   }
 }

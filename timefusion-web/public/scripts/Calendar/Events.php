@@ -31,13 +31,20 @@ class Events {
             $usersIdList = $usersId;
         }
     
-        $sql = "SELECT DISTINCT event.* 
+        $sql = "SELECT DISTINCT event.*
         FROM event
-        JOIN event_participant ON event_participant.event_id = event.id 
-        WHERE event.start_time BETWEEN '{$start->format('Y-m-d 00:00:00')}' AND '{$end->format('Y-m-d 23:59:59')}' 
-        AND (event_participant.participant_id IN ($usersIdList) OR event.creator_id IN ($usersIdList))";
+        WHERE event.id IN (
+            SELECT event_id as id
+            FROM event_participant
+            WHERE participant_id IN ($usersIdList)
+            UNION
+            SELECT id
+            FROM event
+            WHERE creator_id IN ($usersIdList)
+        ) AND event.start_time BETWEEN '{$start->format('Y-m-d 00:00:00')}' AND '{$end->format('Y-m-d 23:59:59')}'";
 
-    
+        
+       
         // Exécute la requête SQL
         $result = $this->mysqli->query($sql);
     
@@ -100,7 +107,11 @@ class Events {
         $event->setEnd(\DateTime::createFromFormat('Y-m-d H:i',$data['date'] . ' ' . $data['end'])->format('Y-m-d H:i:s'));
         $event->setDescription($data['description']);
         $event->setCreatorId($userId);
-        $event->setPrivate($data['is_private']);
+        if(isset($data['is_private'])){
+            $event->setPrivate($data['is_private']);
+        }else{
+            $event->setPrivate(false);
+        }
         return $event;
     }
 
