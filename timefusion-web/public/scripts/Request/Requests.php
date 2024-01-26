@@ -239,7 +239,7 @@ class Requests
         // Ajouter le membre à l'équipe sans effectuer de vérifications
         try {
             // Vérifier si le membre n'est pas déjà dans l'équipe
-            $sqlCheck = "SELECT COUNT(*) FROM event_participant WHERE event_id = ? AND user_id = ?";
+            $sqlCheck = "SELECT COUNT(*) FROM event_participant WHERE event_id = ? AND participant_id = ?";
             $stmtCheck = $this->mysqli->prepare($sqlCheck);
     
             if (!$stmtCheck) {
@@ -261,7 +261,7 @@ class Requests
     
             // Si le membre n'est pas déjà dans l'équipe, l'ajouter
             if ($count == 0) {
-                $sqlInsert = "INSERT INTO event_participant (event_id, user_id) VALUES (?, ?)";
+                $sqlInsert = "INSERT INTO event_participant (event_id, participant_id) VALUES (?, ?)";
                 $stmtInsert = $this->mysqli->prepare($sqlInsert);
     
                 if (!$stmtInsert) {
