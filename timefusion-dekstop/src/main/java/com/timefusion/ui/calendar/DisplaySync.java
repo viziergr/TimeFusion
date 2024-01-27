@@ -107,14 +107,10 @@ public class DisplaySync {
     ObservableList<Calendar> calendar = CalendarView.getCalendars();
     if (calendar.size() > 0) {
       List<Appointment> displayedEvents = calendar.get(0).getAppointments();
-      List<Integer> eventsToNotDisplayIds = getEventsToNotDisplayIds();
       if (displayedEvents.size() > 0) {
         for (Appointment event : displayedEvents) {
           int eventId = event.getEventEntity().getId();
-          if (
-            eventsToNotDisplayIds.contains(eventId) ||
-            !allEventsId.contains(eventId)
-          ) {
+          if (!allEventsId.contains(eventId)) {
             needToUpdate = true;
             CalendarView.getCalendars().get(0).remove(event);
           }
