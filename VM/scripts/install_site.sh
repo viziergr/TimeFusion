@@ -1,7 +1,6 @@
 #!/bin/bash
 
 ## déplace les fichiers du site
-
 IP=$(hostname -I | awk '{print $2}')
 
 APT_OPT="-o Dpkg::Progress-Fancy="0" -q -y"
